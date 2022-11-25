@@ -12,5 +12,10 @@ public class TipoVariable {
 		
 		edad = 25 + 5;
 		System.out.println(edad);
+		
+		System.out.println("Mi edad es: " + edad);
+		
+		String nombrePersona = "Luciana Ferrari";
+		System.out.println("Mi edad es: " + edad + " Y mi nombre es: " + nombrePersona);
 	}
 }
