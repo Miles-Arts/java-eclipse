@@ -31,5 +31,11 @@ public class Conversiones {
 		int resultado = (int)variable1 + variableEntero;
 		System.out.println(resultado);
 	
+		int n = 2 + 3;
+		System.out.println(n);
+		
+
+		double edad = 30.0;
+		System.out.println ("La edad de Marcos es " + (int) edad + "!");
 	}	
 }
