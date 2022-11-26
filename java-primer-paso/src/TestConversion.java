@@ -1,6 +1,8 @@
 public class TestConversion {
 
     public static void main(String[] args){
+    	
+    	float puntoFlotante= 3.14f;
         double salario = 1270.50;
         int valor = (int)salario;
         System.out.println(valor);
