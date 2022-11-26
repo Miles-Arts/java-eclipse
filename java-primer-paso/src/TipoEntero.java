@@ -25,5 +25,13 @@ public class TipoEntero {
 		int salario2 = 1250;
 		int salarioMitad1 = salario2 / 3;
 		System.out.println(salarioMitad1);
+		
+		double peso = 4.0;
+		int cantidad = 10;
+		System.out.println (peso * cantidad);
+		
+		double precio = 5.5;
+		int tickets = 4;
+		System.out.println (precio * tickets);
 	}
 }
