@@ -12,5 +12,5 @@ public class ForFernando {
 			System.out.println(contador1);
 
 		}
-	}
-}
+	} 
+} 
