@@ -10,6 +10,7 @@ public class TestSalario {
             double salario = 3800.0;
         }
 
-        System.out.println(fuePromovido);
+        //System.out.println(fuePromovido);
+        System.out.println(salario);
     }
 }
