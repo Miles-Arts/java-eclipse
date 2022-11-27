@@ -5,7 +5,7 @@ public class ImpuestosRenta {
 
 	public static void main(String[] args) {
 
-		double salario = 4664.0;
+		double salario = 3300.0;
 		// ifs aqui
 
 		if (salario >= 1900 && salario <= 2800) {
