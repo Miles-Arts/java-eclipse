@@ -15,7 +15,15 @@ public class EjemploCaracteres {
 		
 		System.out.println(segundoCaracter);
 		
+		//String es un Objeto en JAVA
+		String palabra = "Aprendo JAVA POO ";
+		System.out.println(palabra);
 		
+		palabra = palabra + "2022.";
+		System.out.println(palabra);
 		
+		//String cuota1 = "10";
+		//String cuota2 = "20";
+		//System.out.println (cuota1 + cuota2);
 	}
 }
