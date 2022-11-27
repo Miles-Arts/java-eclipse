@@ -16,7 +16,8 @@ public class EjemploCondicionales {
 
 		} else {
 			if (cantidad >= 2)
-				System.out.println("Usted no está permitido entrar");
+				System.out.println("Usted es menor de edad; Pero"
+			+ " tiene permitido su ingreso.");
 		}
 		// System.out.println("Bienvenido");
 	}
