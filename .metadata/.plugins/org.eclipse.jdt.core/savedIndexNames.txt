@@ -5,17 +5,14 @@ INDEX VERSION 1.131+C:\Users\gratn\eclipse-workspace\.metadata\.plugins\org.ecli
 3528238001.index
 1865797976.index
 626612610.index
-1630579643.index
 453955381.index
+1630579643.index
 2513093821.index
 2904636744.index
 398925468.index
 356327.index
-<<<<<<< HEAD
-=======
-2368805746.index
->>>>>>> java1
 2830579487.index
+2368805746.index
 2386850106.index
 468107086.index
 2574794399.index
