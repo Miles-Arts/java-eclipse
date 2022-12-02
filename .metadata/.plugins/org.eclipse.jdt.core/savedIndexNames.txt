@@ -1,25 +1,5 @@
 INDEX VERSION 1.131+C:\Users\gratn\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
-4184561138.index
-223881628.index
-1039306593.index
-3528238001.index
-1865797976.index
-626612610.index
-1630579643.index
-453955381.index
-2513093821.index
-2904636744.index
-398925468.index
-356327.index
-<<<<<<< HEAD
-=======
 2368805746.index
->>>>>>> java2
 2830579487.index
-2386850106.index
-468107086.index
-2574794399.index
-460187341.index
-1551969265.index
-923941691.index
-3200703938.index
+1865797976.index
+1964692366.index
