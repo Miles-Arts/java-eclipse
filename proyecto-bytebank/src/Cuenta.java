@@ -1,13 +1,14 @@
 //entidad Cuenta :
 
 class Cuenta {
-	
+
 	double saldo;
-	int	agencia;
+	int agencia;
 	int numero;
-	String	titular;
-	
+	String titular;
+
+	void depositar(double valor) {
+		 saldo = saldo + valor;
+	}
+
 }
-
-
-	

@@ -28,6 +28,8 @@ public class TestReferencia {
 		if (primeraCuenta == segundaCuenta) {
 			System.out.println("Son el mismo objeto");
 			
+		} else {
+			System.out.println("Son diferente");
 		}
 		
 	}
