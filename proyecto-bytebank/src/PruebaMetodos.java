@@ -17,6 +17,14 @@ public class PruebaMetodos {
 		
 		System.out.println(miCuenta.saldo);
 		
+		Cuenta cuentaDeJimena = new Cuenta();
+				
+		cuentaDeJimena.depositar(1000);
+		System.out.println(cuentaDeJimena.saldo);
+		cuentaDeJimena.transferir(400, miCuenta);
+		
+		System.out.println(cuentaDeJimena.saldo);
+		System.out.println(miCuenta.saldo);
 		
 	}
 }
