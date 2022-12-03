@@ -25,6 +25,7 @@ public class TestReferencia {
 		System.out.println(primeraCuenta);
 		System.out.println(segundaCuenta);
 		
+		
 		if (primeraCuenta == segundaCuenta) {
 			System.out.println("Son el mismo objeto");
 			
