@@ -5,7 +5,7 @@ class Cuenta {
 	double saldo;
 	int agencia;
 	int numero;
-	
+	Cliente titular;
 	
 	
 	//No retorna VALOR
