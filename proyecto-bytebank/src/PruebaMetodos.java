@@ -33,6 +33,7 @@ public class PruebaMetodos {
 		System.out.println(cuentaDeJimena.saldo);
 		System.out.println(miCuenta.saldo);
 		
+		
 	}
 	
 }
