@@ -5,9 +5,8 @@ class Cuenta {
 	double saldo;
 	int agencia;
 	int numero;
-	String titular;
+	Cliente titular;
 	
-
 	
 	//No retorna VALOR
 	public void depositar(double valor) {
@@ -47,5 +46,6 @@ class Cuenta {
 		}
 		
 	}
+	
 
 }
