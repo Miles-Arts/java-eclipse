@@ -8,7 +8,19 @@ class Cuenta {
 	private Cliente titular = new Cliente();
 	
 	
-	public Cuenta() {
+	//public Cuenta() {
+		
+	//}
+	
+	public Cuenta(int agencia) {
+		
+		if (agencia <= 0 ) {
+			System.out.println("No se permite cuentas con 0 o menores a 0");
+			this.agencia = 1;
+		} else {
+			this.agencia = agencia;
+		}
+		
 		System.out.println("Aqui se crea una nueva cuenta");
 	}
 

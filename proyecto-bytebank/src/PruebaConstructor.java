@@ -3,12 +3,12 @@ public class PruebaConstructor {
 
 	public static void main(String[] args) {
 		
-		Cuenta cuenta = new Cuenta();
+		Cuenta cuenta = new Cuenta(333);
 		
-		cuenta.setAgencia(-4);
+		//cuenta.setAgencia(-4);
 		
 		
-		System.out.println(cuenta);
+		//System.out.println(cuenta);
 		System.out.println(cuenta.getAgencia());
 		
 	}
