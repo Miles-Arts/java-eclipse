@@ -7,15 +7,15 @@ public class CrearCuenta {
 		
 		Cuenta primeraCuenta = new Cuenta();
 
-		primeraCuenta.getSaldo = 400;
+		primeraCuenta.saldo = 400;
 		// primeraCuenta.pais = "Alemania"; NO COMPILA
 
 		System.out.println(primeraCuenta.getSaldo);
 
 		Cuenta segundaCuenta = new Cuenta();
-		segundaCuenta.getSaldo = 400;
-		System.out.println(segundaCuenta.getSaldo);
-		System.out.println(segundaCuenta.agencia);
+		segundaCuenta.depositar(400);
+		System.out.println(segundaCuenta.saldo);
+		//System.out.println(segundaCuenta.agencia);
 		
 		
 		if (primeraCuenta == segundaCuenta) {

@@ -10,7 +10,15 @@ public class PruebaEncapsulamiento {
 		cliente.setDocumento("A1A2A3");
 		
 				
+		cuenta.setTitular(cliente);
+		
+		Cliente titular = cuenta.getTitular();
+		
 		System.out.println(cliente);
+		System.out.println(titular);
+		System.out.println(cuenta.getTitular());
+		//System.out.println(cliente.getNombre());
+		//System.out.println(cuenta.getTitular().getNombre());
 		
 	}
 	

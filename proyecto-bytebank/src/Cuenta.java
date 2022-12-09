@@ -5,7 +5,7 @@ class Cuenta {
 	private double saldo;
 	private int agencia;
 	private int numero;
-	Cliente titular;
+	private Cliente titular = new Cliente();
 
 	// No retorna VALOR
 	public void depositar(double valor) {
@@ -65,5 +65,9 @@ class Cuenta {
 	
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
+	}
+	
+	public Cliente getTitular() {
+		return titular;
 	}
 }
