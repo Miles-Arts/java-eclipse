@@ -6,6 +6,11 @@ class Cuenta {
 	private int agencia;
 	private int numero;
 	private Cliente titular = new Cliente();
+	
+	
+	public Cuenta() {
+		System.out.println("Aqui se crea una nueva cuenta");
+	}
 
 	// No retorna VALOR
 	public void depositar(double valor) {
