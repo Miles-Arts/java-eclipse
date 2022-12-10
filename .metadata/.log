@@ -9752,6 +9752,7 @@ EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 >>>>>>> java4
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 !ENTRY org.eclipse.core.resources 2 2 2022-12-09 19:54:08.944
 !MESSAGE Save operation warnings.
@@ -9764,6 +9765,8 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 java.io.IOException: Failed to read index data from file:/C:/Users/gratn/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 729 and size 777218413
 	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:685)
 =======
+=======
+>>>>>>> java5
 =======
 
 !ENTRY org.eclipse.jdt.core 4 0 2022-11-27 18:33:31.287
@@ -9838,6 +9841,9 @@ java.io.UTFDataFormatException
 java.io.UTFDataFormatException
 	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:965)
 	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:689)
+<<<<<<< HEAD
+>>>>>>> java5
+=======
 >>>>>>> java5
 	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:485)
 	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:477)
@@ -9850,11 +9856,14 @@ java.io.UTFDataFormatException
 	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 <<<<<<< HEAD
+<<<<<<< HEAD
 Caused by: java.lang.OutOfMemoryError: Java heap space
 	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:56)
 	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:681)
 	... 10 more
 =======
+=======
+>>>>>>> java5
 
 !ENTRY org.eclipse.jdt.core 4 0 2022-11-27 18:33:50.585
 !MESSAGE Failed to update qualified index.
@@ -10267,4 +10276,7 @@ Binding(CTRL+INSERT,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.console.ConsoleView,,,system)
+<<<<<<< HEAD
+>>>>>>> java5
+=======
 >>>>>>> java5
