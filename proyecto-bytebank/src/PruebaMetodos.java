@@ -6,16 +6,16 @@ public class PruebaMetodos {
 		
 		Cuenta miCuenta = new Cuenta();
 		
-		miCuenta.saldo = 300;
+		miCuenta.getSaldo = 300;
 		
 		miCuenta.depositar(200); 
 		
-		System.out.println(miCuenta.saldo);
+		System.out.println(miCuenta.getSaldo);
 		
 		
 		miCuenta.retirar(100);
 		
-		System.out.println(miCuenta.saldo);
+		System.out.println(miCuenta.getSaldo);
 		
 		Cuenta cuentaDeJimena = new Cuenta();
 				
@@ -30,8 +30,9 @@ public class PruebaMetodos {
 			System.out.println("No es posible");
 		}
 		
-		System.out.println(cuentaDeJimena.saldo);
-		System.out.println(miCuenta.saldo);
+		System.out.println(cuentaDeJimena.getSaldo);
+		System.out.println(miCuenta.getSaldo);
+		
 		
 	}
 	

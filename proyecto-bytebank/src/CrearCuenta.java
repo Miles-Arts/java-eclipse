@@ -10,12 +10,12 @@ public class CrearCuenta {
 		primeraCuenta.saldo = 400;
 		// primeraCuenta.pais = "Alemania"; NO COMPILA
 
-		System.out.println(primeraCuenta.saldo);
+		System.out.println(primeraCuenta.getSaldo);
 
 		Cuenta segundaCuenta = new Cuenta();
-		segundaCuenta.saldo = 400;
+		segundaCuenta.depositar(400);
 		System.out.println(segundaCuenta.saldo);
-		System.out.println(segundaCuenta.agencia);
+		//System.out.println(segundaCuenta.agencia);
 		
 		
 		if (primeraCuenta == segundaCuenta) {

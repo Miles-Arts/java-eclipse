@@ -5,22 +5,22 @@ public class TestReferencia {
 		
 		Cuenta primeraCuenta = new Cuenta();
 		
-		primeraCuenta.saldo = 200;
+		primeraCuenta.getSaldo = 200;
 		
 		Cuenta segundaCuenta = primeraCuenta;
 		
-		segundaCuenta.saldo = 100;
+		segundaCuenta.getSaldo = 100;
 	
 		System.out.println("Saldo primera " + "Cuenta: "
-		 + primeraCuenta.saldo);
+		 + primeraCuenta.getSaldo);
 		
 		System.out.println("Saldo segunda " + "Cuenta: "
-				 + segundaCuenta.saldo);
+				 + segundaCuenta.getSaldo);
 		
-		segundaCuenta.saldo += 400; 
+		segundaCuenta.getSaldo += 400; 
 		
 		System.out.println("Saldo primera " + "Cuenta: "
-				 + primeraCuenta.saldo);
+				 + primeraCuenta.getSaldo);
 		
 		System.out.println(primeraCuenta);
 		System.out.println(segundaCuenta);
