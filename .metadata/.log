@@ -9753,6 +9753,7 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 >>>>>>> java4
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 !ENTRY org.eclipse.core.resources 2 2 2022-12-09 19:54:08.944
 !MESSAGE Save operation warnings.
@@ -9765,6 +9766,8 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 java.io.IOException: Failed to read index data from file:/C:/Users/gratn/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 729 and size 777218413
 	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:685)
 =======
+=======
+>>>>>>> java5
 =======
 >>>>>>> java5
 =======
@@ -9842,6 +9845,9 @@ java.io.UTFDataFormatException
 	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:965)
 	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:689)
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> java5
+=======
 >>>>>>> java5
 =======
 >>>>>>> java5
@@ -9857,11 +9863,14 @@ java.io.UTFDataFormatException
 	at java.base/java.lang.Thread.run(Thread.java:833)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Caused by: java.lang.OutOfMemoryError: Java heap space
 	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:56)
 	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:681)
 	... 10 more
 =======
+=======
+>>>>>>> java5
 =======
 >>>>>>> java5
 
@@ -10277,6 +10286,9 @@ Binding(CTRL+INSERT,
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.console.ConsoleView,,,system)
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> java5
+=======
 >>>>>>> java5
 =======
 >>>>>>> java5
