@@ -33,8 +33,29 @@ public class Funcionario {
 		public double getBonificacion() {
 			
 			//Si tipo = 1 es GERENTE
-			//Si tipo = 2 es FUNCIONARIO
-			return this.salario * 0.1;
+			//Si tipo = 0 es FUNCIONARIO
+			
+			if (this.tipo == 0) {
+				
+				return this.salario * 0.1;
+				
+			} else if (this.tipo == 1) {
+				
+				return this.salario ;
+			} else {
+				return 0;
+			}
+			
 		}
+
+		public int getTipo() {
+			return tipo;
+		}
+
+		public void setTipo(int tipo) {
+			this.tipo = tipo;
+		}
+		
+		
 	
 }
