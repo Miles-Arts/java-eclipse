@@ -41,7 +41,7 @@ public class Funcionario {
 
 		// if (this.tipo == 0) {
 
-		return this.salario * 0.1;
+		return this.salario * 0.05;
 
 		// } //else if (this.tipo == 1) {
 
