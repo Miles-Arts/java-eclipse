@@ -4,4 +4,6 @@
     <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="Cliente"/>
     <fullyQualifiedTypeName name="Cuenta"/>
+    <fullyQualifiedTypeName name="Gerente"/>
+    <fullyQualifiedTypeName name="Funcionario"/>
 </qualifiedTypeNameHistroy>
