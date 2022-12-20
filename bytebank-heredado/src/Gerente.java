@@ -12,12 +12,12 @@ public class Gerente extends Funcionario {
 	}
 
 	public double getBonificacion() {
-
-		//return super.getSalario() + (super.getSalario() * 0.1);
+		System.out.println("Ejecuntado gerente");
+		// return super.getSalario() + (super.getSalario() * 0.1);
 		return super.getSalario() + super.getBonificacion();
 
 	}
-	// lo de abAjo ya esta en FUNCIONARIO
+	// lo de abajo ya esta en FUNCIONARIO
 
 	// private String nombre;
 	// private String documento;
