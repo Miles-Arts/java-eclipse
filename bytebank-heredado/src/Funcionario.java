@@ -1,5 +1,5 @@
 
-public class Funcionario {
+public abstract class Funcionario {
 
 	private String nombre;
 	private String documento;
@@ -34,14 +34,14 @@ public class Funcionario {
 		this.salario = salario;
 	}
 
-	public double getBonificacion() {
-
+	public abstract double getBonificacion(); //{
+		//ABSTRAEMOS A Bonifiicación para que sea utilizada en clases hijas. 
 		// Si tipo = 1 es GERENTE
 		// Si tipo = 0 es FUNCIONARIO
 
 		// if (this.tipo == 0) {
 
-		return this.salario * 0.05;
+		//return this.salario * 0.05;
 
 		// } //else if (this.tipo == 1) {
 
@@ -50,8 +50,9 @@ public class Funcionario {
 		// return 0;
 		// }
 
-	}
+	//}
 
+	
 	public int getTipo() {
 		return tipo;
 	}

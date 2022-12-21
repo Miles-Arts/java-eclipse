@@ -54,7 +54,8 @@ class Cuenta {
 	public boolean transferir(double valor, Cuenta cuenta) {
 
 		if (this.saldo >= valor) {
-			this.saldo = this.saldo - valor;
+			this.retirar(valor);
+			//this.saldo = this.saldo - valor;
 			// this.saldo -= valor;
 			cuenta.depositar(valor);
 			// cuenta.saldo = cuenta.saldo + valor;
