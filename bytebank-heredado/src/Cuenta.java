@@ -12,8 +12,6 @@ class Cuenta {
 		
 	//}
 	
-
-	
 	public Cuenta(int agencia, int numero) {
 		
 		if (agencia <= 0 ) {

@@ -6,4 +6,16 @@ public class CuentaCorriente extends Cuenta {
 		
 		super(agencia, numero);
 	}
+	
+	
+	// Override indica que el método está siendo sobre escrito
+	
+	@Override
+	public boolean retirar(double valor) {
+		// TODO Auto-generated method stub
+		double comision = 0.2;
+		return super.retirar(valor + comision);
+	}
+	
+	
 }
