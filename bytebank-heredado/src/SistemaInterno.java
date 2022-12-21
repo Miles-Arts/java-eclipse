@@ -1,10 +1,11 @@
 
 public class SistemaInterno {
 
-	public boolean autentica(Gerente gerente) {
-
-		private String clave = "12345";
-
+	private String clave = "12345";
+	
+	public boolean autentica(FuncionarioAutenticable gerente) {
+	//public boolean autentica(Gerente gerente) {
+		
 		boolean puedeIniciarSesion = gerente.iniciarSesion(clave);
 		// return false;
 		if (puedeIniciarSesion) {

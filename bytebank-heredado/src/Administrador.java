@@ -1,17 +1,9 @@
 
-public class Administrador extends Funcionario {
+public class Administrador extends FuncionarioAutenticable {
 
-	private String clave;
+	
 
-	public void setClave(String clave) {
-		this.clave = clave;
-	}
-
-	public boolean iniciarSesion(String clave) {
-		return clave == "12AB";
-	}
-
-	@Override
+	//@Override
 	public double getBonificacion() {
 		// TODO Auto-generated method stub
 		return 0;

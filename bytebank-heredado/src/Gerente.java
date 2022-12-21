@@ -1,22 +1,16 @@
 //                    Extiende de
-public class Gerente extends Funcionario {
+public class Gerente extends FuncionarioAutenticable {
 
-	private String clave;
 
-	public void setClave(String clave) {
-		this.clave = clave;
-	}
-
-	public boolean iniciarSesion(String clave) {
-		return clave == "12AB";
-	}
 
 	public double getBonificacion() {
 		System.out.println("Ejecuntado gerente");
 		// return super.getSalario() + (super.getSalario() * 0.1);
 		//return super.getSalario() + super.getBonificacion();
-		return super.getSalario() + this.getSalario() * 0.05;
+		//return super.getSalario() + this.getSalario() * 0.05;
+		return 2000;
 	}
+	
 	// lo de abajo ya esta en FUNCIONARIO
 
 	// private String nombre;
