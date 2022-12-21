@@ -6,4 +6,10 @@ public class CuentaAhorros extends Cuenta {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public void depositar(double valor) {
+		// TODO Auto-generated method stub
+		this.saldo = this.saldo + valor;
+	}
+
 }

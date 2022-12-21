@@ -1,43 +1,50 @@
 //entidad Cuenta :
 
-class Cuenta {
+public abstract class  Cuenta {
 
-	private double saldo;
+	//private double saldo;
+	protected double saldo;
 	private int agencia;
 	private int numero;
 	private Cliente titular = new Cliente();
 	private static int total = 0;
 	
-	//public Cuenta() {
+	public Cuenta() {
 		
-	//}
+	}
 	
 	public Cuenta(int agencia, int numero) {
 		
-		if (agencia <= 0 ) {
-			System.out.println("No se permite cuentas con 0 o menores a 0");
-			this.agencia = 1;
-		} else {
-			this.agencia = agencia;
-		}
+	        this.agencia = agencia;
+	        this.numero = numero;
+	        System.out.println("Estoy creando una cuenta " + this.numero);
+
+	        Cuenta.total ++;
+	    }
+		//if (agencia <= 0 ) {
+			//System.out.println("No se permite cuentas con 0 o menores a 0");
+			//this.agencia = 1;
+		//} else {
+		//	this.agencia = agencia;
+		//}
 		
-		total++;
+		//total++;
 		
-		System.out.println("Se van creando: " + total + " cuentas");
+		//System.out.println("Se van creando: " + total + " cuentas");
 		
 		//System.out.println("Aqui se crea una nueva cuenta");
-	}
+	//}
 
 	// No retorna VALOR
-	public void depositar(double valor) {
+	public abstract void depositar(double valor); //{
 
 		// Esta cuenta Esta Cuenta
 		// this account this account
 		// this object
 		// this.saldo = this.saldo + valor;
-		this.saldo += valor;
+		//this.saldo += valor;
 
-	}
+	//}
 
 	// Retorna Valor
 	public boolean retirar(double valor) {
