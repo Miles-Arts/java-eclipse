@@ -1,7 +1,7 @@
 
 public class SistemaInterno {
 
-	private String clave = "12345";
+	private String clave = "12AB";
 	
 	public boolean autentica(FuncionarioAutenticable gerente) {
 	//public boolean autentica(Gerente gerente) {
