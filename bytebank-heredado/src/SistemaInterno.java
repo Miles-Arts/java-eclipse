@@ -3,7 +3,7 @@ public class SistemaInterno {
 
 	private String clave = "12AB";
 	
-	public boolean autentica(FuncionarioAutenticable gerente) {
+	public boolean autentica(Autenticable gerente) {
 	//public boolean autentica(Gerente gerente) {
 		
 		boolean puedeIniciarSesion = gerente.iniciarSesion(clave);

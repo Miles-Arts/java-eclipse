@@ -1,5 +1,5 @@
 //                    Extiende de
-public class Gerente extends FuncionarioAutenticable {
+public class Gerente extends Autenticable {
 
 
 

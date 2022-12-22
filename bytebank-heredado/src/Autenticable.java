@@ -1,5 +1,5 @@
 
-public class FuncionarioAutenticable {
+public class Autenticable extends Funcionario{
 
 	private String clave;
 
@@ -9,6 +9,12 @@ public class FuncionarioAutenticable {
 
 	public boolean iniciarSesion(String clave) {
 		return clave == "12AB";
+	}
+
+	@Override
+	public double getBonificacion() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
