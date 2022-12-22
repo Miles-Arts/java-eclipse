@@ -13,7 +13,7 @@ public class TestGerente {
 
 		System.out.println(gerente.getBonificacion());
 		System.out.println(gerente.getSalario());
-		System.out.println(gerente.iniciarSecion("12AB"));
+		System.out.println(gerente.iniciarSesion("12AB"));
 	}
 
 }

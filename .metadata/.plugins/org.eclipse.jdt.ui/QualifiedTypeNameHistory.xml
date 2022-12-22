@@ -4,10 +4,15 @@
     <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="Cliente"/>
     <fullyQualifiedTypeName name="Cuenta"/>
-    <fullyQualifiedTypeName name="Funcionario"/>
-    <fullyQualifiedTypeName name="Gerente"/>
     <fullyQualifiedTypeName name="ControlBonificacion"/>
     <fullyQualifiedTypeName name="Contador"/>
     <fullyQualifiedTypeName name="CuentaCorriente"/>
     <fullyQualifiedTypeName name="CuentaAhorros"/>
+    <fullyQualifiedTypeName name="SistemaInterno"/>
+    <fullyQualifiedTypeName name="java.awt.GradientPaint"/>
+    <fullyQualifiedTypeName name="Gerente"/>
+    <fullyQualifiedTypeName name="Administrador"/>
+    <fullyQualifiedTypeName name="FuncionarioAutenticable"/>
+    <fullyQualifiedTypeName name="Funcionario"/>
+    <fullyQualifiedTypeName name="Autenticable"/>
 </qualifiedTypeNameHistroy>
