@@ -36,9 +36,9 @@ public class Flujo {
 			//	exception.printStackTrace();
 			//}
 		//}
-		Cuenta cuenta = new Cuenta();
-		throw  new ArithmeticException();
-		
+		//Cuenta cuenta = new Cuenta();
+		//throw  new ArithmeticException();
+		throw  new MiException("Mi excepción fue lanzada");
 		
 		//System.out.println("Fin del metodo2");
 	} 
