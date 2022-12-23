@@ -9,7 +9,15 @@ public class Flujo {
 
 	private static void metodo1() {
 		System.out.println("Inicio del metodo1");
-		metodo2();
+		
+		try {
+			metodo2();
+		} catch (MiException me) {
+			me.printStackTrace();
+		}
+		
+		//metodo2();
+		
 		System.out.println("Fin del metodo1");
 	}
 
