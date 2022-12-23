@@ -37,8 +37,8 @@ public class Flujo {
 			//}
 		//}
 		
-		ArithmeticException ae = new ArithmeticException();
-		throw ae;
+		throw  new ArithmeticException();
+		
 		
 		//System.out.println("Fin del metodo2");
 	} 
