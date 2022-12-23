@@ -16,4 +16,5 @@
     <fullyQualifiedTypeName name="Autenticable"/>
     <fullyQualifiedTypeName name="Administrador"/>
     <fullyQualifiedTypeName name="AutenticacionUtil"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
 </qualifiedTypeNameHistroy>
