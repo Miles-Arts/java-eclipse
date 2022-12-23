@@ -36,7 +36,7 @@ public class Flujo {
 			//	exception.printStackTrace();
 			//}
 		//}
-		
+		Cuenta cuenta = new Cuenta();
 		throw  new ArithmeticException();
 		
 		
