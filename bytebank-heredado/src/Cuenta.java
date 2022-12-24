@@ -48,20 +48,22 @@ public abstract class  Cuenta {
 	//}
 
 	// Retorna Valor
-	public void retirar(double valor) {
+	public void retirar(double valor) throws SaldoInsuficienteException {
 	//public boolean retirar(double valor) {
 		
 
 		//if (this.saldo >= valor) {
 			// this.saldo = this.saldo - valor;
+		if (this.saldo < valor) {
+			//El control de ERRORES va al inicio del Método
+			throw new SaldoInsuficienteException("No tienes Saldo");
+		}
 			this.saldo -= valor;
 
-			
-			
 		//	return true;
 		//}
 		//return false;
-		
+
 	}
 		
 	public boolean transferir(double valor, Cuenta cuenta) {
