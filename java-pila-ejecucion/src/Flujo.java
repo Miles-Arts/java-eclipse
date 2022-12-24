@@ -21,8 +21,9 @@ public class Flujo {
 		System.out.println("Fin del metodo1");
 	}
 
-	private static void metodo2() {
-		//System.out.println("Inicio del metodo2");
+	private static void metodo2() throws MiException {
+	//private static void metodo2() {
+		System.out.println("Inicio del metodo2");
 		//for (int i = 1; i <= 5; i++) {
 			//System.out.println(i);
 
@@ -46,7 +47,7 @@ public class Flujo {
 		//}
 		//Cuenta cuenta = new Cuenta();
 		//throw  new ArithmeticException();
-		//throw  new MiException("Mi excepción fue lanzada");
+		throw  new MiException("Mi excepción fue lanzada");
 		
 		//metodo2();
 		
