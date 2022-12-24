@@ -16,7 +16,7 @@
     <fullyQualifiedTypeName name="Administrador"/>
     <fullyQualifiedTypeName name="AutenticacionUtil"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
-    <fullyQualifiedTypeName name="Cuenta"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="MiException"/>
+    <fullyQualifiedTypeName name="Cuenta"/>
 </qualifiedTypeNameHistroy>
