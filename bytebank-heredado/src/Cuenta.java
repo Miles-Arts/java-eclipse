@@ -7,7 +7,8 @@ public abstract class  Cuenta {
 	private int agencia;
 	private int numero;
 	private Cliente titular = new Cliente();
-	private static int total = 0;
+	////private static int total = 0;
+	private static int total;
 	
 	public Cuenta() {
 		
@@ -47,17 +48,22 @@ public abstract class  Cuenta {
 	//}
 
 	// Retorna Valor
-	public boolean retirar(double valor) {
+	public void retirar(double valor) {
+	//public boolean retirar(double valor) {
+		
 
-		if (this.saldo >= valor) {
+		//if (this.saldo >= valor) {
 			// this.saldo = this.saldo - valor;
 			this.saldo -= valor;
 
-			return true;
-		}
-		return false;
+			
+			
+		//	return true;
+		//}
+		//return false;
+		
 	}
-
+		
 	public boolean transferir(double valor, Cuenta cuenta) {
 
 		if (this.saldo >= valor) {

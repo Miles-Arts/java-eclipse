@@ -8,7 +8,7 @@ public class TestCuentaExceptionChecked {
 		try {
 			cuenta.deposita();
 		} catch (MiException e) {
-			System.out.println("Exception atrapado");
+			//System.out.println("Exception atrapado");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
