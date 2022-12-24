@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="Cliente"/>
-    <fullyQualifiedTypeName name="Cuenta"/>
     <fullyQualifiedTypeName name="ControlBonificacion"/>
     <fullyQualifiedTypeName name="Contador"/>
     <fullyQualifiedTypeName name="CuentaCorriente"/>
@@ -17,4 +16,7 @@
     <fullyQualifiedTypeName name="Administrador"/>
     <fullyQualifiedTypeName name="AutenticacionUtil"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="Cuenta"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="MiException"/>
 </qualifiedTypeNameHistroy>
