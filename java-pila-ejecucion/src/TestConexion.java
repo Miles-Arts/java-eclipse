@@ -4,7 +4,14 @@ public class TestConexion {
 	public static void main(String[] args) throws Exception  {
 		
 		try (Conexion con = new Conexion())  {
-			con.leerDatos();
+			
+			con.leerDatos(); //Try with resources
+			
+		} catch (IllegalStateException ex) {
+			
+			System.out.println("Ejecutando catch");
+			ex.printStackTrace();
+			
 		}
 	
 		/*

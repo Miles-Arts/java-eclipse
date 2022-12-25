@@ -8,7 +8,7 @@ public class Conexion implements AutoCloseable {
 
 	public void leerDatos() {
 		System.out.println("Recibiendo datos");
-		// throw new IllegalStateException();
+		 throw new IllegalStateException();
 	}
 
 	public void cerrar() {
