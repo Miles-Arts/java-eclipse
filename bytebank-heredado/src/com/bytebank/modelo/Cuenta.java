@@ -3,6 +3,13 @@ package com.bytebank.modelo;
 
 public abstract class  Cuenta {
 
+	
+	// MODIFICADORES DE AccESO
+	// public  = Accesible desde cualquier parte //El mas permisivo // 
+	// default = Accesible dentro del paquete // Sólo visible a nivel Package
+	// protected = Default + clases hijas // Visible en Package y Herencia
+	// private = Sólo desde la clase misma // El más restrictivo
+
 	//private double saldo;
 	protected double saldo;
 	private int agencia;
