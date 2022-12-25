@@ -1,5 +1,5 @@
 
-public class Conexion {
+public class Conexion implements AutoCloseable {
 
 	public Conexion() {
 		System.out.println("Abriendo conexion");
@@ -8,10 +8,18 @@ public class Conexion {
 
 	public void leerDatos() {
 		System.out.println("Recibiendo datos");
-		//throw new IllegalStateException();
+		// throw new IllegalStateException();
 	}
 
 	public void cerrar() {
 		System.out.println("Cerrando conexion");
+	}
+
+	@Override
+	public void close() throws Exception {
+		// TODO Auto-generated method stub
+
+		cerrar();
+
 	}
 }

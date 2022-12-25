@@ -1,8 +1,13 @@
 
 public class TestConexion {
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) throws Exception  {
+		
+		try (Conexion con = new Conexion())  {
+			con.leerDatos();
+		}
+	
+		/*
 		//Conexion con = new Conexion();
 		Conexion con = null;
 		
@@ -25,8 +30,7 @@ public class TestConexion {
 			if (con != null ) {
 				
 				con.cerrar();
-			}
-			//con.cerrar();		
-		}
-	}
+			}	//con.cerrar();		
+		} */
+	} 
 }
