@@ -1,9 +1,12 @@
+package test;
+
+import modelo.SaldoInsuficienteException;
 
 public class TestCuentaExceptionSaldo {
 
 	public static void main(String[] args) {
 
-		Cuenta cuenta = new CuentaAhorros(123, 456);
+		modelo.Cuenta cuenta = new modelo.CuentaAhorros(123, 456);
 		cuenta.depositar(300);
 		try {
 			cuenta.retirar(290);

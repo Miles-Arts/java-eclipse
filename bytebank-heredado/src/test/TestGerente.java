@@ -1,9 +1,10 @@
-
+package test;
 public class TestGerente {
 
 	public static void main(String[] args) {
 
-		Gerente gerente = new Gerente();
+		// package + classname
+		modelo.Gerente gerente = new modelo.Gerente();
 		// gerente.setSalario(5000);
 		// Funcionario gerente = new Funcionario();
 		gerente.setSalario(6000);

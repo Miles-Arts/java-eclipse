@@ -1,4 +1,4 @@
-
+package modelo;
 public class Contador extends Funcionario {
 	
 	@Override

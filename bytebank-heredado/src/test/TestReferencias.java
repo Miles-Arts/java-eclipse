@@ -1,4 +1,4 @@
-
+package test;
 public class TestReferencias {
 
 	public static void main(String[] args) {
@@ -7,16 +7,16 @@ public class TestReferencias {
 
 		// El elemento más generico o general puede
 		// ser adaptado al elemento más especifico o particular
-		Funcionario funcionario = new Gerente();
+		modelo.Funcionario funcionario = new modelo.Gerente();
 		funcionario.setNombre("Diego");
 
-		Gerente gerente = new Gerente();
+		modelo.Gerente gerente = new modelo.Gerente();
 		gerente.setNombre("Jimena");
 
 		funcionario.setSalario(2000);
 		gerente.setSalario(10000);
 		
-		funcionario.iniciarSesion();
+		//funcionario.iniciarSesion();
 
 	}
 

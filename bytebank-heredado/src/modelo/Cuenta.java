@@ -1,3 +1,4 @@
+package modelo;
 //entidad Cuenta :
 
 public abstract class  Cuenta {
@@ -57,6 +58,7 @@ public abstract class  Cuenta {
 		if (this.saldo < valor) {
 			//El control de ERRORES va al inicio del Método
 			throw new SaldoInsuficienteException("No tienes Saldo");
+			//this.saldo -= valor;
 		}
 			this.saldo -= valor;
 
@@ -66,7 +68,7 @@ public abstract class  Cuenta {
 
 	}
 		
-	public boolean transferir(double valor, Cuenta cuenta) {
+	public boolean transferir(double valor, Cuenta cuenta) throws SaldoInsuficienteException {
 
 		if (this.saldo >= valor) {
 			this.retirar(valor);

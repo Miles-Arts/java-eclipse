@@ -1,3 +1,4 @@
+package modelo;
 
 public  interface Autenticable {
 	// En INTERFACE todos los métodos son abstractos 

@@ -1,22 +1,22 @@
-
+package test;
 public class TestControlBonificacion {
 
 	
 	public static void main(String[] args) {
 		
-		Funcionario diego = new Contador();
+		modelo.Funcionario diego = new modelo.Contador();
 		diego.setSalario(2000);
 		
 		
-		Gerente jimena = new Gerente();
+		modelo.Gerente jimena = new modelo.Gerente();
 		jimena.setSalario(10000);
 		
 		
-		Contador alexis = new Contador();
+		modelo.Contador alexis = new modelo.Contador();
 		alexis.setSalario(5000);
 		
 		
-		ControlBonificacion controlBonificacion = new ControlBonificacion();
+		modelo.ControlBonificacion controlBonificacion = new modelo.ControlBonificacion();
 		
 		controlBonificacion.registrarSalario(diego);
 		controlBonificacion.registrarSalario(jimena);
