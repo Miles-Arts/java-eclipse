@@ -1,4 +1,4 @@
-package modelo;
+package com.bytebank.modelo;
 //entidad Cuenta :
 
 public abstract class  Cuenta {

@@ -1,4 +1,4 @@
-package modelo;
+package com.bytebank.modelo;
 
 public  interface Autenticable {
 	// En INTERFACE todos los métodos son abstractos 

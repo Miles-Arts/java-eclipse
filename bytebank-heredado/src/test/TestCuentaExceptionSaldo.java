@@ -6,7 +6,7 @@ public class TestCuentaExceptionSaldo {
 
 	public static void main(String[] args) {
 
-		modelo.Cuenta cuenta = new modelo.CuentaAhorros(123, 456);
+		com.bytebank.modelo.Cuenta cuenta = new modelo.CuentaAhorros(123, 456);
 		cuenta.depositar(300);
 		try {
 			cuenta.retirar(290);

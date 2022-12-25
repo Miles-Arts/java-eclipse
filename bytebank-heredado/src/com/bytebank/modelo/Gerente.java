@@ -1,4 +1,4 @@
-package modelo;
+package com.bytebank.modelo;
 //                    Extiende de
 public class Gerente extends Funcionario  implements Autenticable {
 
