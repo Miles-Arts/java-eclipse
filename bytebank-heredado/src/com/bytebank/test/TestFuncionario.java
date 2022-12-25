@@ -1,6 +1,6 @@
 package com.bytebank.test;
 
-import com.bytebank.modelo.Funcionario;
+import com.bytebank.modelo.*;
 
 public class TestFuncionario {
 

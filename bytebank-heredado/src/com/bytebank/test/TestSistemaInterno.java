@@ -1,8 +1,6 @@
 package com.bytebank.test;
 
-import com.bytebank.modelo.SistemaInterno;
-import com.bytebank.modelo.Gerente;
-import com.bytebank.modelo.Administrador;
+import com.bytebank.modelo.*;
 
 
 public class TestSistemaInterno {

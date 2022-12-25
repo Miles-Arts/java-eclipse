@@ -1,7 +1,6 @@
 package com.bytebank.test;
 
-import com.bytebank.modelo.Funcionario;
-import com.bytebank.modelo.Gerente;
+import com.bytebank.modelo.*;
 
 public class TestReferencias {
 
