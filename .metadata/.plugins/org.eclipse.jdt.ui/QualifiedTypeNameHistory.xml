@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="ControlBonificacion"/>
     <fullyQualifiedTypeName name="Contador"/>
     <fullyQualifiedTypeName name="CuentaCorriente"/>
-    <fullyQualifiedTypeName name="CuentaAhorros"/>
     <fullyQualifiedTypeName name="SistemaInterno"/>
     <fullyQualifiedTypeName name="java.awt.GradientPaint"/>
     <fullyQualifiedTypeName name="Gerente"/>
@@ -15,8 +14,12 @@
     <fullyQualifiedTypeName name="Autenticable"/>
     <fullyQualifiedTypeName name="Administrador"/>
     <fullyQualifiedTypeName name="AutenticacionUtil"/>
-    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
-    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="MiException"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="SaldoInsuficienteException"/>
     <fullyQualifiedTypeName name="Cuenta"/>
+    <fullyQualifiedTypeName name="CuentaAhorros"/>
 </qualifiedTypeNameHistroy>
