@@ -1,12 +1,14 @@
-package test;
+package com.bytebank.test;
 
-import modelo.SaldoInsuficienteException;
+import com.bytebank.modelo.SaldoInsuficienteException;
+import com.bytebank.modelo.Cuenta;
+import com.bytebank.modelo.CuentaAhorros;
 
 public class TestCuentaExceptionSaldo {
 
 	public static void main(String[] args) {
 
-		com.bytebank.modelo.Cuenta cuenta = new modelo.CuentaAhorros(123, 456);
+		Cuenta cuenta = new CuentaAhorros(123, 456);
 		cuenta.depositar(300);
 		try {
 			cuenta.retirar(290);

@@ -1,4 +1,8 @@
-package test;
+package com.bytebank.test;
+
+import com.bytebank.modelo.Funcionario;
+import com.bytebank.modelo.Gerente;
+
 public class TestReferencias {
 
 	public static void main(String[] args) {
@@ -7,10 +11,10 @@ public class TestReferencias {
 
 		// El elemento más generico o general puede
 		// ser adaptado al elemento más especifico o particular
-		modelo.Funcionario funcionario = new modelo.Gerente();
+		Funcionario funcionario = new Gerente();
 		funcionario.setNombre("Diego");
 
-		modelo.Gerente gerente = new modelo.Gerente();
+		Gerente gerente = new Gerente();
 		gerente.setNombre("Jimena");
 
 		funcionario.setSalario(2000);
