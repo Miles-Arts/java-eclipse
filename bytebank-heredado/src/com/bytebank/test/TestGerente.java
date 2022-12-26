@@ -1,9 +1,21 @@
 package com.bytebank.test;
 
+/**
+ * Creando Gerente
+ * 
+ * @author Milton Figueredo
+ * 
+ */
+
 import com.bytebank.modelo.*;
 
 public class TestGerente {
 
+	/**
+	 * Sueldo Gerente
+	 * @param varios funcionarios
+	 */
+	
 	public static void main(String[] args) {
 
 		// package + classname
