@@ -24,6 +24,8 @@ public class TestArregloReferencias {
 		
 		for (int i = 0; i < cuentasCorrientes.length; i++) {
 			System.out.println(cuentasCorrientes[i]);
+		
+			
 		}
 		
 	}
