@@ -93,7 +93,7 @@ public class TestString {
 	public static void printLine(Object valor) {
 
 		//valor = valor.toUpperCase();
-		System.out.println(valor);
+		System.out.println(valor.toString());
 
 	}
 
