@@ -28,11 +28,17 @@
     <fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
     <fullyQualifiedTypeName name="modelo.SaldoInsuficienteException"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.ControlBonificacion"/>
-    <fullyQualifiedTypeName name="com.bytebank.modelo.CuentaAhorros"/>
-    <fullyQualifiedTypeName name="com.bytebank.modelo.SistemaInterno"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.Administrador"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.Gerente"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.Funcionario"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.Contador"/>
+    <fullyQualifiedTypeName name="java.awt.Cursor"/>
+    <fullyQualifiedTypeName name="javax.swing.undo.CannotUndoException"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.Cuenta"/>
+    <fullyQualifiedTypeName name="com.bytebank.modelo.SistemaInterno"/>
+    <fullyQualifiedTypeName name="java.awt.SystemColor"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="com.bytebank.modelo.CuentaCorriente"/>
+    <fullyQualifiedTypeName name="com.bytebank.modelo.CuentaAhorros"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
