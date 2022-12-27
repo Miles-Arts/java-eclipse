@@ -2,6 +2,8 @@ package com.bytebank.test;
 
 import java.awt.SystemColor;
 
+import com.bytebank.modelo.CuentaAhorros;
+
 public class TestString {
 
 	/**
@@ -75,22 +77,37 @@ public class TestString {
 		printLine("Hola " + nombre);
 		printLine("Hola " + texto);
 		printLine(letra);
+		printLine(indice);
 		printLine(1);
+		printLine(new CuentaAhorros(200, 300));
 
 	}
 
-	public static void printLine(int valor) {
+	public static void printLine(Object valor) {
 
 		//valor = valor.toUpperCase();
 		System.out.println(valor);
 
 	}
 
-	public static void printLine(String valor) {
+//	public static void printLine(String valor) {
 
-		valor = valor.toUpperCase();
-		System.out.println(valor);
+//		valor = valor.toUpperCase();
+//		System.out.println(valor);
 
-	}
+//	}
+	
+//	public static void printLine(char valor) {
+
+		//valor = valor.toUpperCase();
+//		System.out.println(valor);
+
+//	}
+//	public static void printLine(CuentaAhorros) {
+
+//		//valor = valor.toUpperCase();
+//		System.out.println(valor);
+
+//	}
 
 }
