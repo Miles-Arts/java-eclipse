@@ -86,7 +86,7 @@ public class TestString {
 		printLine(indice);
 		printLine(1);
 		printLine(new CuentaAhorros(200, 300));
-		printLine(cuenta);
+		//printLine(cuenta);
 
 	}
 

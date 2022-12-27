@@ -12,14 +12,19 @@ public class CuentaAhorros extends Cuenta {
 		this.saldo = this.saldo + valor;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
 	
 	/**
 	 * ejemplo clase
 	 */
 	
-	@Override
-	public String toString() {
-	    return "CuentaAhorros, " + super.toString();
-	}
+	//@Override
+	//public String toString() {
+	//    return "CuentaAhorros, " + super.toString();
+	//}
 
 }

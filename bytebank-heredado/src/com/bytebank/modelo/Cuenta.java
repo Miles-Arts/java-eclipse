@@ -153,12 +153,21 @@ public abstract class Cuenta {
 		return Cuenta.total;
 	}
 	
+	@Override
+	public String toString() {
+		
+		String cuenta = "Numero: " + this.numero + ", Agencia: " + this.agencia;
+		
+		// TODO Auto-generated method stub
+		return cuenta; 
+	}
+	
 	/**
 	 * ejemplo clase
 	 */
 	
-	@Override
-	public String toString() {
-	    return "Numero: " + this.numero + ", Agencia: " + this.agencia;
-	}
+	//@Override
+	//public String toString() {
+	   // return "Numero: " + this.numero + ", Agencia: " + this.agencia;
+	//}
 }
