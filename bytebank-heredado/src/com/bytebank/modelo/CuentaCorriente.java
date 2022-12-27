@@ -21,5 +21,13 @@ public class CuentaCorriente extends Cuenta {
 		// TODO Auto-generated method stub
 
 	}
+	
+	/** ejemplo clase
+	 * 
+	 */
+	@Override
+	public String toString() {
+	    return "CuentaCorriente, " + super.toString();
+	}
 
 }

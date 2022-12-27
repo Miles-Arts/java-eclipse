@@ -11,5 +11,15 @@ public class CuentaAhorros extends Cuenta {
 		// TODO Auto-generated method stub
 		this.saldo = this.saldo + valor;
 	}
+	
+	
+	/**
+	 * ejemplo clase
+	 */
+	
+	@Override
+	public String toString() {
+	    return "CuentaAhorros, " + super.toString();
+	}
 
 }

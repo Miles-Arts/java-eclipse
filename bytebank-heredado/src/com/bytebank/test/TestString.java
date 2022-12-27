@@ -73,6 +73,12 @@ public class TestString {
 
 		System.out.println("---------");
 
+		/**
+		 * OBJECT es una súper clase, la más importante en JAVA
+		 */
+		
+		Object cuenta = new CuentaAhorros(20, 30);
+		
 		printLine("Hola" );
 		printLine("Hola " + nombre);
 		printLine("Hola " + texto);
@@ -80,6 +86,7 @@ public class TestString {
 		printLine(indice);
 		printLine(1);
 		printLine(new CuentaAhorros(200, 300));
+		printLine(cuenta);
 
 	}
 

@@ -152,4 +152,13 @@ public abstract class Cuenta {
 
 		return Cuenta.total;
 	}
+	
+	/**
+	 * ejemplo clase
+	 */
+	
+	@Override
+	public String toString() {
+	    return "Numero: " + this.numero + ", Agencia: " + this.agencia;
+	}
 }
