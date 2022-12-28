@@ -10,6 +10,7 @@ public class TestArregloReferencias {
 	public static void main(String[] args) {
 		
 		
+		
 		Object[] referencias = new Object[5];
 		
 		
