@@ -1,6 +1,8 @@
 package com.bytebank.test;
 
 import com.bytebank.modelo.Cliente;
+import com.bytebank.modelo.Cuenta;
+import com.bytebank.modelo.CuentaCorriente;
 
 public class TestCanelo {
 	
@@ -31,10 +33,36 @@ public class TestCanelo {
 		
 		/**
 		 * un DOUBLE no cabe en un INT
+		 * 
+		 * En este caso, el compilador desecha todo 
+		 * el valor fraccionario 3.56 y almacena solo 
+		 * el valor entero 3.
 		 */
 		double valor33 = 3.56;
 		int numero33 = (int) valor33; //cast explícito es exigido por el compilador
 		System.out.println(numero33);
+		
+		
+		CuentaCorriente cc1 = new CuentaCorriente(22, 33);
+		Cuenta cuenta = cc1; //cast implícito
+		
+		System.out.println(cuenta);
+		
+		CuentaCorriente cc2 = new CuentaCorriente(22, 33);
+		Cuenta cuenta1 = (Cuenta) cc2; //cast explícito mas desnecessário
+		System.out.println(cuenta1);
+		
+		
+		/**
+		 * Como el cliente no extiende la clase de Cuenta 
+		 * ni implementa una interfaz de tipo de Cuenta, 
+		 * es imposible que funcione ese cast, 
+		 * ya que una referencia de tipo de Cuenta 
+		 * nunca puede apuntar a un objeto del 
+		 * tipo de Cliente.
+		 */
+		Cliente cliente = new Cliente();
+		Cuenta cuenta2 = (Cuenta) cliente; //imposible, no compila
 	}
 	/*
 		public static void main (String[] args) {
