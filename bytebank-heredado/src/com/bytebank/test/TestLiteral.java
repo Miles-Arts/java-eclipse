@@ -15,7 +15,7 @@ public class TestLiteral {
 		
 		int[] refs = {1,2,3,4,5};
 		
-		System.out.println(refs[0]);
+		System.out.println(refs[2]);
 	}
 	
 }
