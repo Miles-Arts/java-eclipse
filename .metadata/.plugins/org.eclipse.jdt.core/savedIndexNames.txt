@@ -3,5 +3,4 @@ INDEX VERSION 1.131+C:\Users\gratn\eclipse-workspace\.metadata\.plugins\org.ecli
 216586017.index
 2808105239.index
 3243658646.index
-2689603100.index
 1964692366.index
