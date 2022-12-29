@@ -152,44 +152,46 @@ public abstract class Cuenta {
 
 		return Cuenta.total;
 	}
-	
+
 	@Override
 	public String toString() {
-		
-		String cuenta = "Numero: " + this.numero + ", Agencia: " + this.agencia;
-		
-		// TODO Auto-generated method stub
-		return cuenta; 
-	}
-	
-	
-	public int getNumero() {
-        return numero;
-    }
 
-    //public void setNumero(int numero) {
-        //if (numero > 0) {
-            //this.numero = numero;
-        //}
-    //}
-	
+		String cuenta = "Numero: " + this.numero + ", Agencia: " + this.agencia;
+
+		// TODO Auto-generated method stub
+		return cuenta;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	void setNumero(int numero) {
+		if (numero > 0) {
+			this.numero = numero;
+		}
+	}
+
 	public boolean esIgual(Cuenta cuenta) {
 		return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
-				
+
+	}
+	
+	public boolean equals() {
+		
 	}
 
-	//private int getNumero() {
-		// TODO Auto-generated method stub
-		//return 0;
-	//}
+	// private int getNumero() {
+	// TODO Auto-generated method stub
+	// return 0;
+	// }
 
-	
 	/**
 	 * ejemplo clase
 	 */
-	
-	//@Override
-	//public String toString() {
-	   // return "Numero: " + this.numero + ", Agencia: " + this.agencia;
-	//}
+
+	// @Override
+	// public String toString() {
+	// return "Numero: " + this.numero + ", Agencia: " + this.agencia;
+	// }
 }
