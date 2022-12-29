@@ -17,9 +17,13 @@ public class TestArrayList {
 		// de la construcción de un objeto, Generics acepta un parámatro por otro
 		ArrayList<Cuenta> lista = new ArrayList<>();
 
-		Cuenta cuentaCorriente1 = new CuentaCorriente(88, 99);
+		
+		// Referencia               Objeto->HEAP || Los números son atributos
+		Cuenta cuentaCorriente1 = new CuentaCorriente(11, 22);
 		Cuenta cuentaCorriente2 = new CuentaCorriente(13, 42);
-
+		Cuenta cuentaCorriente3 = new CuentaCorriente(11, 22);
+		
+		
 		lista.add(cuentaCorriente1);
 		lista.add(cuentaCorriente2);
 
@@ -40,8 +44,24 @@ public class TestArrayList {
 			System.out.println(cuenta);
 		}
 		
+		//el método CONTAINS en Boolean
+		// boolean contiene = lista.contains(cuentaCorriente1);
+		lista.contains(cuentaCorriente3);
 		
+		if (lista.contains(cuentaCorriente3)) {
+			System.out.println("Si");
+		} else {
+			System.out.println("Es otra cuenta?");
+		}
+		
+		if (cuentaCorriente1.esIgual(cuentaCorriente3)) {
+			System.out.println("Si es igual XD"); 
+				
+			} else {
+				System.out.println("Es diferete cuenta");
+			}
 	}
-	
-	
 }
+	
+	
+

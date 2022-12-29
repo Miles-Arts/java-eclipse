@@ -162,6 +162,28 @@ public abstract class Cuenta {
 		return cuenta; 
 	}
 	
+	
+	public int getNumero() {
+        return numero;
+    }
+
+    //public void setNumero(int numero) {
+        //if (numero > 0) {
+            //this.numero = numero;
+        //}
+    //}
+	
+	public boolean esIgual(Cuenta cuenta) {
+		return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
+				
+	}
+
+	//private int getNumero() {
+		// TODO Auto-generated method stub
+		//return 0;
+	//}
+
+	
 	/**
 	 * ejemplo clase
 	 */
