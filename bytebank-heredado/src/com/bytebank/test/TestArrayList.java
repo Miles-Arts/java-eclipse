@@ -1,7 +1,6 @@
 package com.bytebank.test;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import com.bytebank.modelo.Cuenta;
 import com.bytebank.modelo.CuentaCorriente;
@@ -31,14 +30,18 @@ public class TestArrayList {
 		// System.out.println(lista.add(cuenta2));
 
 		// Un método para llamar lista Array con ARRAYList
-		// for ( int i = 0; i < lista.size(); i++) {
-		// System.out.println((Cuenta) lista.get(i));
-		// }
+		//for ( int i = 0; i < lista.size(); i++) {
+		//System.out.println((Cuenta) lista.get(i));
+		//}
 
 		// por cada cuenta en la lista imprime
 		// FOR se usa operador <> DIAMANTE
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
 		}
+		
+		
 	}
+	
+	
 }
