@@ -177,8 +177,9 @@ public abstract class Cuenta {
 
 	}
 	
-	public boolean equals() {
-		
+	public boolean equals(Cuenta cuenta) {
+		return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
+
 	}
 
 	// private int getNumero() {
