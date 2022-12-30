@@ -161,7 +161,8 @@ public abstract class Cuenta {
 		// TODO Auto-generated method stub
 		return cuenta;
 	}
-
+	
+	// Numero de cuenta
 	public int getNumero() {
 		return numero;
 	}
@@ -172,12 +173,22 @@ public abstract class Cuenta {
 		}
 	}
 
-	public boolean esIgual(Cuenta cuenta) {
-		return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
-
-	}
 	
-	public boolean equals(Cuenta cuenta) {
+	//Equals hace éste método
+	//public boolean esIgual(Cuenta cuenta) {
+		//return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
+	//}
+	
+	
+	
+	//AÑADO @Override para que EQUALS 
+	//sepa que estoy sobre escribiendo un método
+	//y se CATS el método object
+	@Override
+	public boolean equals(Object obj) {
+		//equal hace comparación 
+		//basada en VALORES y NO en referencias.
+		Cuenta cuenta = (Cuenta) obj;
 		return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
 
 	}
