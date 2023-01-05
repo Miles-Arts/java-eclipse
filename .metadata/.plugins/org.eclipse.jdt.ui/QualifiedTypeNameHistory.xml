@@ -45,4 +45,8 @@
     <fullyQualifiedTypeName name="com.bytebank.test.CuentaEspecial"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.Cuenta"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.CuentaCorriente"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
 </qualifiedTypeNameHistroy>

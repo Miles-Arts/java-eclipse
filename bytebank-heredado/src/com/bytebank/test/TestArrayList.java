@@ -17,7 +17,7 @@ public class TestArrayList {
 
 		// Forzar <> a que acepte sólo un tipo de objeto
 		// -Generics- Espacios que tiene un objeto como parámetros
-		// de la construcción de un objeto, Generics acepta un parámatro por otro
+		// de la construcción de un objeto, Generics acepta un parámetro por otro
 		// ArrayList<Cuenta> lista = new ArrayList<>();
 
 		// anexando LIST con CLIENTES
