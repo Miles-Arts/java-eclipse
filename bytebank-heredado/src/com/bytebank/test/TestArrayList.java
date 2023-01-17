@@ -26,6 +26,7 @@ public class TestArrayList {
 		// Implementando java.util.LIST
 		// Obligatorio Especificar  || Acá no
 		List<Cuenta> lista = new ArrayList<>();
+		//Collection<Cuenta> lista = new ArrayList<>();
 
 		// Usando Vector funciona modo Hilos
 		//List<Cuenta> lista = new Vector<>();
