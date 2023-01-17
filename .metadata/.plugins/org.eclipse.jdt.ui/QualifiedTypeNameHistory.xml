@@ -41,12 +41,12 @@
     <fullyQualifiedTypeName name="com.bytebank.modelo.CuentaAhorros"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.Cliente"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.GuardaCuentas"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.bytebank.test.CuentaEspecial"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.Cuenta"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.CuentaCorriente"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
