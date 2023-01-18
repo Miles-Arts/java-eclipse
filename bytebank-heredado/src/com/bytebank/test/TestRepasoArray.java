@@ -12,14 +12,22 @@ public class TestRepasoArray {
 		//List lista = new ArrayList();
 		
 		int numero = 40;
-		Integer numeroObjeto = new Integer(40);
+		//WARPPER
+		//Integer numeroObjeto = new Integer(40); DEPRECADO  Integer será desactualizado por JAVA
+		Integer numeroObjeto = new Integer.valueOf(40);
 		
 		List<Integer> lista = new ArrayList<Integer>();
 		lista.add(numero); //Autoboxing
-		lista.add(new Integer(40));
+		//lista.add(new Integer(40));
+		lista.add(Integer.valueOf(40));
 		lista.add(numeroObjeto);
 		
-
+		//unboxing
+		//int valorPrimitivo = numerObjeto;
+		
+		
+		int valorPrimitivo = numeroObjeto.intValue();
+		
 		//PRIMITIVO != OBJECT	
 		
 		//System.out.println(lista.add.get());
