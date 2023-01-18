@@ -1,6 +1,7 @@
 package com.bytebank.test;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import com.bytebank.modelo.Cuenta;
@@ -40,6 +41,16 @@ public class TestOrdenarLista {
 
 // creando class para ejmplo de clase
 class OrdenadorPorNumeroCuenta implements Comparator<Cuenta> {
+	
+	@Override
+	public int compare(Cuenta cuentaCorriente1, Cuenta cuentaCorriente2) {
+		
+		if (cuentaCorriente1.getNumero() == cuentaCorriente2.getNumero() ) {
+			return 0;
+		}
+		
+		return 0;
+	}
 	
 }
 
