@@ -2,7 +2,6 @@ package com.bytebank.test;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 
 import com.bytebank.modelo.Cuenta;
@@ -47,6 +46,12 @@ public class TestOrdenarLista {
 		
 		Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta();
 		lista.sort(comparator);
+		
+		System.out.println("Después de ordenar");
+		for (Cuenta cuenta : lista) {
+			System.out.println(cuenta);
+			
+		}
 	}
 }
 
@@ -54,17 +59,15 @@ public class TestOrdenarLista {
 class OrdenadorPorNumeroCuenta implements Comparator<Cuenta> {
 
 	@Override
-	public int compare(Cuenta cuentaCorriente1, Cuenta cuentaCorriente2) {
+	public int compare(Cuenta o1, Cuenta o2) {
 
-		if (cuentaCorriente1.getNumero() == cuentaCorriente2.getNumero()) {
+		if (o1.getNumero() == o2.getNumero()) {
 			return 0;
-		} else if (cuentaCorriente1.getNumero() == cuentaCorriente2.getNumero()) {
+		} else if (o1.getNumero() > o2.getNumero()) {
 			return 1;
 		} else {
 			return -1;
 		}
-
-		
 	}
 
 }
