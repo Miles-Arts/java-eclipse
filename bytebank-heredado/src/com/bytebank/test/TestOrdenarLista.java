@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import com.bytebank.modelo.Cuenta;
+import com.bytebank.modelo.CuentaAhorros;
 import com.bytebank.modelo.CuentaCorriente;
 
 public class TestOrdenarLista {
@@ -14,20 +15,20 @@ public class TestOrdenarLista {
 		Cuenta cuentaCorriente1 = new CuentaCorriente(22, 33);
 		cuentaCorriente1.depositar(333.0);
 
-		Cuenta cuentaCorriente2 = new CuentaCorriente(22, 44);
-		cuentaCorriente2.depositar(444.0);
+		Cuenta cuentaAhorro2 = new CuentaAhorros(22, 44);
+		cuentaAhorro2.depositar(444.0);
 
 		Cuenta cuentaCorriente3 = new CuentaCorriente(22, 11);
 		cuentaCorriente3.depositar(111.0);
 
-		Cuenta cuentaCorriente4 = new CuentaCorriente(22, 22);
-		cuentaCorriente4.depositar(222.0);
+		Cuenta cuentaAhorro4 = new CuentaAhorros(22, 22);
+		cuentaAhorro4.depositar(222.0);
 
 		List<Cuenta> lista = new ArrayList<Cuenta>();
 		lista.add(cuentaCorriente1);
-		lista.add(cuentaCorriente2);
+		lista.add(cuentaAhorro2);
 		lista.add(cuentaCorriente3);
-		lista.add(cuentaCorriente4);
+		lista.add(cuentaAhorro4);
 		
 		
 		System.out.println("Antes de ordenar");
