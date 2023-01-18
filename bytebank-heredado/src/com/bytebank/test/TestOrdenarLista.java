@@ -1,10 +1,11 @@
 package com.bytebank.test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.bytebank.modelo.Cuenta;
 import com.bytebank.modelo.CuentaCorriente;
-import com.sun.tools.javac.util.List;
+
 
 public class TestOrdenarLista {
 
@@ -22,7 +23,7 @@ public class TestOrdenarLista {
 		Cuenta cuentaCorriente4 =new CuentaCorriente(22, 22);
 		cuentaCorriente4.depositar(222.0);
 		
-		List<Cuenta> lista = new ArrayList<>();
+		List<Cuenta> lista = new ArrayList<Cuenta>();
 		lista.add(cuentaCorriente1);
 		lista.add(cuentaCorriente2);
 		lista.add(cuentaCorriente3);
