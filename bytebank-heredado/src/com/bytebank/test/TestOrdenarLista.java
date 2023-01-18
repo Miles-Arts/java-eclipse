@@ -55,6 +55,13 @@ public class TestOrdenarLista {
 		cuentaAhorros4.setTitular(clienteCuentaAhorros4);
 		cuentaAhorros4.depositar(222.0);
 
+
+		List<Cuenta> lista = new ArrayList<Cuenta>();
+		lista.add(cuentaCorriente1);
+		lista.add(cuentaAhorros2);
+		lista.add(cuentaCorriente3);
+		lista.add(cuentaAhorros4);
+		
 		System.out.println("Antes de ordenar");
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
@@ -69,11 +76,6 @@ public class TestOrdenarLista {
 		// lista.sort(comparator);
 		// Comparator<T>*/
 
-		List<Cuenta> lista = new ArrayList<Cuenta>();
-		lista.add(cuentaCorriente1);
-		lista.add(cuentaAhorros2);
-		lista.add(cuentaCorriente3);
-		lista.add(cuentaAhorros4);
 		
 		Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta();
 		lista.sort(comparator);
@@ -102,3 +104,23 @@ class OrdenadorPorNumeroCuenta implements Comparator<Cuenta> {
 	}
 
 }
+
+
+// create class new example, for classroom 
+class OrdenandoPorNombreTitular implements Comparator<Cuenta>{
+
+	@Override
+	public int compare(Cuenta o1, Cuenta o2) {
+		
+		o1.getTitular().getNombre().compareTo(o2.getTitular().getNombre());
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}
+
+
+
+
+
+
