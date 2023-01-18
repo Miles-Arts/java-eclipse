@@ -20,7 +20,11 @@ public class TestWrappers {
 		System.out.println(stringToDouble);
 		System.out.println(stringToInteger);
 		
+		Number numero = Integer.valueOf(5);
+		double numeroDoublePrim = numero.doubleValue();
 		
+		Boolean falso = Boolean.FALSE;
+		//Boolean falso = false;
 		
 	}
 	
