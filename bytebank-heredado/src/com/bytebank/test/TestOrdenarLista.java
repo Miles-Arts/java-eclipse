@@ -47,6 +47,8 @@ class OrdenadorPorNumeroCuenta implements Comparator<Cuenta> {
 		
 		if (cuentaCorriente1.getNumero() == cuentaCorriente2.getNumero() ) {
 			return 0;
+		} else if (cuentaCorriente1.getNumero() == cuentaCorriente2.getNumero() ) {
+			
 		}
 		
 		return 0;
