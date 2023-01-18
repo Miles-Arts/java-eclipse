@@ -13,52 +13,52 @@ public class TestOrdenarLista {
 
 	public static void main(String[] args) {
 
-		/*Cuenta cuentaCorriente1 = new CuentaCorriente(22, 33);
-		cuentaCorriente1.depositar(333.0);
+		/*
+		 * Cuenta cuentaCorriente1 = new CuentaCorriente(22, 33);
+		 * cuentaCorriente1.depositar(333.0);
+		 * 
+		 * Cuenta cuentaAhorro2 = new CuentaAhorros(22, 44);
+		 * cuentaAhorro2.depositar(444.0);
+		 * 
+		 * Cuenta cuentaCorriente3 = new CuentaCorriente(22, 11);
+		 * cuentaCorriente3.depositar(111.0);
+		 * 
+		 * Cuenta cuentaAhorro4 = new CuentaAhorros(22, 22);
+		 * cuentaAhorro4.depositar(222.0);
+		 * 
+		 * List<Cuenta> lista = new ArrayList<Cuenta>(); lista.add(cuentaCorriente1);
+		 * lista.add(cuentaAhorro2); lista.add(cuentaCorriente3);
+		 * lista.add(cuentaAhorro4);
+		 */
 
-		Cuenta cuentaAhorro2 = new CuentaAhorros(22, 44);
-		cuentaAhorro2.depositar(444.0);
-
-		Cuenta cuentaCorriente3 = new CuentaCorriente(22, 11);
-		cuentaCorriente3.depositar(111.0);
-
-		Cuenta cuentaAhorro4 = new CuentaAhorros(22, 22);
-		cuentaAhorro4.depositar(222.0);
-
-		List<Cuenta> lista = new ArrayList<Cuenta>();
-		lista.add(cuentaCorriente1);
-		lista.add(cuentaAhorro2);
-		lista.add(cuentaCorriente3);
-		lista.add(cuentaAhorro4);*/
-		
 		Cuenta cuentaCorriente1 = new CuentaCorriente(22, 11);
 		Cliente clienteCuentaCorriente1 = new Cliente();
-		clienteCuentaCorriente1.setNombre("Liam");
+		clienteCuentaCorriente1.setNombre("Diego");
 		cuentaCorriente1.setTitular(clienteCuentaCorriente1);
-		cuentaCorriente1.depositar(111.0);
-		
+		cuentaCorriente1.depositar(333.0);
+
 		Cuenta cuentaAhorros2 = new CuentaAhorros(22, 11);
 		Cliente clienteCuentaAhorros2 = new Cliente();
-		clienteCuentaAhorros2.setNombre("Liam");
+		clienteCuentaAhorros2.setNombre("Renato");
 		cuentaAhorros2.setTitular(clienteCuentaAhorros2);
-		cuentaAhorros2.depositar(111.0);
-		
+		cuentaAhorros2.depositar(444.0);
+
 		Cuenta cuentaCorriente3 = new CuentaCorriente(22, 11);
 		Cliente clienteCuentaCorriente3 = new Cliente();
 		clienteCuentaCorriente3.setNombre("Liam");
 		cuentaCorriente3.setTitular(clienteCuentaCorriente3);
 		cuentaCorriente3.depositar(111.0);
-		
+
 		Cuenta cuentaAhorros4 = new CuentaAhorros(22, 11);
 		Cliente clienteCuentaAhorros4 = new Cliente();
-		clienteCuentaAhorros4.setNombre("Liam");
+		clienteCuentaAhorros4.setNombre("Noél");
 		cuentaAhorros4.setTitular(clienteCuentaAhorros4);
-		cuentaAhorros4.depositar(111.0);
-		
+		cuentaAhorros4.depositar(222.0);
+
 		System.out.println("Antes de ordenar");
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
-			
+
 		}
 
 		// Ordenar las cuentas
@@ -67,15 +67,21 @@ public class TestOrdenarLista {
 		// Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta(); //
 		// Implementacion de la interfaz
 		// lista.sort(comparator);
-		// Comparator<T>
+		// Comparator<T>*/
+
+		List<Cuenta> lista = new ArrayList<Cuenta>();
+		lista.add(cuentaCorriente1);
+		lista.add(cuentaAhorros2);
+		lista.add(cuentaCorriente3);
+		lista.add(cuentaAhorros4);
 		
 		Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta();
 		lista.sort(comparator);
-		
+
 		System.out.println("Después de ordenar");
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
-			
+
 		}
 	}
 }
