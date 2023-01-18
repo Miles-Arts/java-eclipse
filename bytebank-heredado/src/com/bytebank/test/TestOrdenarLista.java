@@ -31,13 +31,13 @@ public class TestOrdenarLista {
 		 * lista.add(cuentaAhorro4);
 		 */
 
-		Cuenta cuentaCorriente1 = new CuentaCorriente(22, 11);
+		Cuenta cuentaCorriente1 = new CuentaCorriente(62, 33);
 		Cliente clienteCuentaCorriente1 = new Cliente();
 		clienteCuentaCorriente1.setNombre("Diego");
 		cuentaCorriente1.setTitular(clienteCuentaCorriente1);
 		cuentaCorriente1.depositar(333.0);
 
-		Cuenta cuentaAhorros2 = new CuentaAhorros(22, 11);
+		Cuenta cuentaAhorros2 = new CuentaAhorros(32, 44);
 		Cliente clienteCuentaAhorros2 = new Cliente();
 		clienteCuentaAhorros2.setNombre("Renato");
 		cuentaAhorros2.setTitular(clienteCuentaAhorros2);
@@ -49,19 +49,18 @@ public class TestOrdenarLista {
 		cuentaCorriente3.setTitular(clienteCuentaCorriente3);
 		cuentaCorriente3.depositar(111.0);
 
-		Cuenta cuentaAhorros4 = new CuentaAhorros(22, 11);
+		Cuenta cuentaAhorros4 = new CuentaAhorros(22, 22);
 		Cliente clienteCuentaAhorros4 = new Cliente();
 		clienteCuentaAhorros4.setNombre("Noél");
 		cuentaAhorros4.setTitular(clienteCuentaAhorros4);
 		cuentaAhorros4.depositar(222.0);
-
 
 		List<Cuenta> lista = new ArrayList<Cuenta>();
 		lista.add(cuentaCorriente1);
 		lista.add(cuentaAhorros2);
 		lista.add(cuentaCorriente3);
 		lista.add(cuentaAhorros4);
-		
+
 		System.out.println("Antes de ordenar");
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
@@ -76,14 +75,20 @@ public class TestOrdenarLista {
 		// lista.sort(comparator);
 		// Comparator<T>*/
 
-		
 		Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta();
 		lista.sort(comparator);
 
-		System.out.println("Después de ordenar");
+		//System.out.println("Después de ordenar");
+		//for (Cuenta cuenta : lista) {
+			//System.out.println(cuenta);
+			
+		Comparator<Cuenta> comparatorNombreTitular = new OrdenandoPorNombreTitular();
+		lista.sort(comparatorNombreTitular);
+		
+		System.out.println("Después de ordenar por nombre titular");
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
-
+		
 		}
 	}
 }
@@ -105,22 +110,16 @@ class OrdenadorPorNumeroCuenta implements Comparator<Cuenta> {
 
 }
 
-
 // create class new example, for classroom 
-class OrdenandoPorNombreTitular implements Comparator<Cuenta>{
+class OrdenandoPorNombreTitular implements Comparator<Cuenta> {
 
 	@Override
 	public int compare(Cuenta o1, Cuenta o2) {
-		
-		o1.getTitular().getNombre().compareTo(o2.getTitular().getNombre());
-		// TODO Auto-generated method stub
-		return 0;
+
+		// o1.getTitular().getNombre().compareTo(o2.getTitular().getNombre());
+		return o1.getTitular().getNombre().compareTo(o2.getTitular().getNombre());
+
+		// return 0;
 	}
-	
+
 }
-
-
-
-
-
-
