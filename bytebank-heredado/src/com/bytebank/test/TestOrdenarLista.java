@@ -34,7 +34,7 @@ public class TestOrdenarLista {
 	    // Comparator <? extend Cuenta> c
 	    // Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta(); // Implementacion de la interfaz
 	    //lista.sort(comparator);
-		
+		//Comparator<T>
 	}
 }
 
