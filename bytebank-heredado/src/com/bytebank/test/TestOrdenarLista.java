@@ -98,9 +98,17 @@ public class TestOrdenarLista {
 		
 		
 		Collections.sort(lista, new OrdenandoPorNombreTitular());
-		Collections.sort(lista);
+		//Collections.sort(lista);
 		
 		System.out.println("--Después de ordenar por nombre titular");
+		for (Cuenta cuenta : lista) {
+			System.out.println(cuenta);
+			
+		}
+		
+		Collections.sort(lista);
+		
+		System.out.println("--Después de ordenar por orden Natural");
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
 			

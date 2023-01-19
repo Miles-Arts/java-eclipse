@@ -13,7 +13,8 @@ package com.bytebank.modelo;
  *
  */
 
-public abstract class Cuenta {
+//public abstract class Cuenta {
+public abstract class Cuenta implements Comparable<Cuenta>{
 
 	// MODIFICADORES DE AccESO
 	// public = Accesible desde cualquier parte //El mas permisivo //
@@ -192,6 +193,14 @@ public abstract class Cuenta {
 		return this.agencia == cuenta.getAgencia() && this.numero == cuenta.getNumero();
 
 	}
+	
+	@Override
+	public int compareTo(Cuenta o) {
+		//ORDEN NATURAL: Numero de Agencia
+		
+		return Integer.compare(this.agencia, o.getAgencia());
+	}
+	
 
 	// private int getNumero() {
 	// TODO Auto-generated method stub
