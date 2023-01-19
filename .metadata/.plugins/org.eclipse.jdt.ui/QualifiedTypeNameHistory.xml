@@ -40,7 +40,6 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.GuardaCuentas"/>
     <fullyQualifiedTypeName name="com.bytebank.test.CuentaEspecial"/>
-    <fullyQualifiedTypeName name="com.bytebank.modelo.Cuenta"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.CuentaCorriente"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
@@ -53,4 +52,6 @@
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="com.bytebank.test.OrdenandoPorNombreTitular"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="com.bytebank.modelo.Cuenta"/>
 </qualifiedTypeNameHistroy>
