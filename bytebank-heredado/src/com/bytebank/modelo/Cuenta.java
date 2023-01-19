@@ -198,7 +198,11 @@ public abstract class Cuenta implements Comparable<Cuenta>{
 	public int compareTo(Cuenta o) {
 		//ORDEN NATURAL: Numero de Agencia
 		
-		return Integer.compare(this.agencia, o.getAgencia());
+		//return Integer.compare(this.agencia, o.getAgencia());
+	
+		// Orden Natural: Saldo
+		
+		return Double.compare(this.getSaldo(), o.getSaldo());
 	}
 	
 

@@ -50,7 +50,7 @@ public class TestOrdenarLista {
 		cuentaCorriente3.setTitular(clienteCuentaCorriente3);
 		cuentaCorriente3.depositar(111.0);
 
-		Cuenta cuentaAhorros4 = new CuentaAhorros(22, 22);
+		Cuenta cuentaAhorros4 = new CuentaAhorros(2, 22);
 		Cliente clienteCuentaAhorros4 = new Cliente();
 		clienteCuentaAhorros4.setNombre("Noél");
 		cuentaAhorros4.setTitular(clienteCuentaAhorros4);
@@ -96,7 +96,7 @@ public class TestOrdenarLista {
 
 		
 		
-		
+		// la nueva forma desde JAVA 8
 		Collections.sort(lista, new OrdenandoPorNombreTitular());
 		//Collections.sort(lista);
 		
