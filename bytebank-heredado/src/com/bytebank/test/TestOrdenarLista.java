@@ -136,7 +136,7 @@ public class TestOrdenarLista {
 
 
 
-
+/*
 // creando class para ejmplo de clase
 
 class OrdenadorPorNumeroCuenta implements Comparator<Cuenta> {
@@ -174,3 +174,4 @@ class OrdenandoPorNombreTitular implements Comparator<Cuenta> {
 		// return 0;
 	}
 }
+*/
