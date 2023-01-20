@@ -55,10 +55,8 @@ public class TestLambda {
 		}
 
 		
-		
-		lista.forEach((Cuenta cuenta) -> {
-			System.out.println(cuenta);
-		});
+		//forEach con método LAMBDA
+		lista.forEach(cuenta -> System.out.println(cuenta));
 		
 		Collections.sort(lista, (cc1, ca2) ->  
 			cc1.getTitular().getNombre().compareTo(ca2.getTitular().getNombre())
