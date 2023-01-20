@@ -45,10 +45,8 @@ public class TestLambda {
 		lista.add(cuentaAhorros4);
 
 		
-		
-		lista.sort(Cuenta o1, Cuenta o2) {
-				return Integer.compare(o1.getNumero(), o2.getNumero());		
-		});
+		// USANDO LAMBDAS
+		lista.sort((Cuenta o1, Cuenta o2) -> Integer.compare(o1.getNumero(), o2.getNumero()));
 
 		
 		System.out.println("Antes de ordenar");
@@ -56,16 +54,17 @@ public class TestLambda {
 			System.out.println(cuenta);
 		}
 
-		Collections.sort(lista, new Comparator<Cuenta>() {
-
-			@Override
-			public int compare(Cuenta o1, Cuenta o2) {
-
-				return o1.getTitular().getNombre().compareTo(o2.getTitular().getNombre());
-			}
-
+		
+		
+		lista.forEach((Cuenta cuenta) -> {
+			System.out.println(cuenta);
 		});
+		
+		Collections.sort(lista, (cc1, ca2) ->  
+			cc1.getTitular().getNombre().compareTo(ca2.getTitular().getNombre())
+		);
 
+		
 		System.out.println("Después de ordenar por nombre titular");
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
