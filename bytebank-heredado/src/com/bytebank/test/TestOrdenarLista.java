@@ -76,17 +76,7 @@ public class TestOrdenarLista {
 		// lista.sort(comparator);
 		// Comparator<T>*/
 
-		Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta();// Implementación de la intefaz
-		// lista.sort(comparator);
-		lista.sort(new Comparator<Cuenta>() {
-
-			@Override
-			public int compare(Cuenta o1, Cuenta o2) {
-				return Integer.compare(o1.getNumero(), o2.getNumero());
-				// return 0;
-			}
-
-		});
+	
 
 		// System.out.println("Después de ordenar");
 		// for (Cuenta cuenta : lista) {
@@ -96,6 +86,28 @@ public class TestOrdenarLista {
 
 		// forma ANTIGUA
 		// lista.sort(new OrdenandoPorNombreTitular());
+		//Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta();// Implementación de la intefaz
+		// lista.sort(comparator);
+		//lista.sort(new Comparator<Cuenta>() {
+
+			//@Override
+			//public int compare(Cuenta o1, Cuenta o2) {
+			//	return Integer.compare(o1.getNumero(), o2.getNumero());
+				// return 0;
+			//}
+
+		//});
+		// FORMA ANTIGUA
+		Collections.sort(lista, new Comparator<Cuenta>() {
+
+			@Override
+			public int compare(Cuenta o1, Cuenta o2) {
+				
+				return o1.getTitular().getNombre().compareTo(o2.getTitular().getNombre());
+			}
+			
+		});
+		
 
 		System.out.println("Después de ordenar por nombre titular");
 		for (Cuenta cuenta : lista) {
