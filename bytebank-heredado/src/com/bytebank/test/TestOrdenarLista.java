@@ -76,8 +76,17 @@ public class TestOrdenarLista {
 		// lista.sort(comparator);
 		// Comparator<T>*/
 
-		// Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta();
+		Comparator<Cuenta> comparator = new OrdenadorPorNumeroCuenta();// Implementación de la intefaz
 		// lista.sort(comparator);
+		lista.sort(new Comparator<Cuenta>() {
+
+			@Override
+			public int compare(Cuenta o1, Cuenta o2) {
+				return Integer.compare(o1.getNumero(), o2.getNumero());
+				// return 0;
+			}
+
+		});
 
 		// System.out.println("Después de ordenar");
 		// for (Cuenta cuenta : lista) {
@@ -94,51 +103,50 @@ public class TestOrdenarLista {
 
 		}
 
-		
-		
 		// la nueva forma desde JAVA 8
-		Collections.sort(lista, new OrdenandoPorNombreTitular());
-		//Collections.sort(lista);
-		
+		// Collections.sort(lista, new OrdenandoPorNombreTitular()); // Implementación
+		// de la intefaz
+		// Collections.sort(lista);
+
 		System.out.println("--Después de ordenar por nombre titular");
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
-			
+
 		}
-		
+
 		Collections.sort(lista);
-		
+
 		System.out.println("--Después de ordenar por orden Natural");
 		for (Cuenta cuenta : lista) {
 			System.out.println(cuenta);
-			
+
 		}
 	}
 }
 
 // creando class para ejmplo de clase
-	class OrdenadorPorNumeroCuenta implements Comparator<Cuenta> {
+class OrdenadorPorNumeroCuenta implements Comparator<Cuenta> {
 
-		@Override
-		public int compare(Cuenta o1, Cuenta o2) {
+	@Override
+	public int compare(Cuenta o1, Cuenta o2) {
 
-			// ABAJO FORMA BÁSICA
-			// if (o1.getNumero() == o2.getNumero()) {
-			// return 0;
-			// } else if (o1.getNumero() > o2.getNumero()) {
-			// return 1;
-			// } else {
-			// return -1;
-			// }
+		// ABAJO FORMA BÁSICA
+		// if (o1.getNumero() == o2.getNumero()) {
+		// return 0;
+		// } else if (o1.getNumero() > o2.getNumero()) {
+		// return 1;
+		// } else {
+		// return -1;
+		// }
 
-			// FORMA INTERMEDIA
-			// return o1.getNumero() - o2.getNumero();
+		// FORMA INTERMEDIA
+		// return o1.getNumero() - o2.getNumero();
 
-			// FORMA WRAPPER optima
-			return Integer.compare(o1.getNumero(), o2.getNumero());
-		}
-
+		// FORMA WRAPPER optima
+		// return Integer.compare(o1.getNumero(), o2.getNumero());
 	}
+
+}
 
 // create class new example, for classroom 
 class OrdenandoPorNombreTitular implements Comparator<Cuenta> {
