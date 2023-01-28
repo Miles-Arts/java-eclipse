@@ -21,15 +21,18 @@ public class ProductoController {
 	public List<?> listar() throws SQLException {
 		
 		Connection con = DriverManager.getConnection(
-				"jdb:mysql://localhost/control_de_stock?useTimeZonetrue&serverTomeZone=UTC", 
+				"jdbc:mysql://localhost/control_de_stock?useTimeZonetrue&serverTomeZone=UTC", 
 				"root", 
 				"github");
 		
-		System.out.println("Cerrando conexión");
+		System.out.println("Conexión...");
 		
 		Statement statement = con.createStatement();
 		
-		boolean execute	= tatement.execute("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
+		boolean result = statement.execute("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
+		
+		System.out.println("Cerrando conexión");
+		System.out.println( result);
 		
 		con.close();
 		
