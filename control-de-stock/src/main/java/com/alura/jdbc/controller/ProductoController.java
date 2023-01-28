@@ -1,8 +1,10 @@
 package com.alura.jdbc.controller;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +27,11 @@ public class ProductoController {
 		
 		System.out.println("Cerrando conexión");
 		
-		con.createStatement();
-		//con.close();
+		Statement statement = con.createStatement();
+		
+		boolean execute	= tatement.execute("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
+		
+		con.close();
 		
 		return new ArrayList<>();
 	}
