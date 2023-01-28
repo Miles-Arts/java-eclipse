@@ -1,5 +1,8 @@
 package com.alura.jdbc.controller;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,8 +16,18 @@ public class ProductoController {
 		// TODO
 	}
 
-	public List<?> listar() {
-		// TODO
+	public List<?> listar() throws SQLException {
+		
+		Connection con = DriverManager.getConnection(
+				"jdb:mysql://localhost/control_de_stock?useTimeZonetrue&serverTomeZone=UTC", 
+				"root", 
+				"github");
+		
+		System.out.println("Cerrando conexión");
+		
+		con.createStatement();
+		//con.close();
+		
 		return new ArrayList<>();
 	}
 
