@@ -21,14 +21,14 @@ public class ProductoController {
 		// TODO
 	}
 
-	public List<Map> listar() throws SQLException {
+	public List<Map<String, String>> listar() throws SQLException {
 		
 		Connection con = DriverManager.getConnection(
 				"jdbc:mysql://localhost/control_de_stock?useTimeZonetrue&serverTomeZone=UTC", 
 				"root", 
 				"github");
 		
-		//System.out.println("Conexión...");
+		
 		
 		Statement statement = con.createStatement();
 		
@@ -37,8 +37,6 @@ public class ProductoController {
 		statement.execute("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
 		
 		ResultSet resultSet =  statement.getResultSet();
-		
-		System.out.println("conexión");
 		
 		
 		List<Map<String, String>> resultado = new ArrayList<>();
@@ -53,8 +51,7 @@ public class ProductoController {
 			fila.put("CANTIDAD", String.valueOf( resultSet.getInt("CANTIDAD")));
 			
 			resultado.add(fila);
-			
-			
+			System.out.println("Cerrando Conexión");
 		}
 		
 		con.close();
@@ -66,5 +63,7 @@ public class ProductoController {
     public void guardar(Object producto) {
 		// TODO
 	}
+    
+    
 
 }
