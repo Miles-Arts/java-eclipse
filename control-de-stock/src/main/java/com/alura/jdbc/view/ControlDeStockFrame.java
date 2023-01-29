@@ -215,6 +215,14 @@ public class ControlDeStockFrame extends JFrame {
     		
     	var productos = this.productoController.listar();
 
+    	   try {
+               // TODO
+               // productos.forEach(producto -> modelo.addRow(new Object[] { "id", "nombre",
+               // "descripcion" }));
+           } catch (Exception e) {
+               throw e;
+           }
+    	
     	} catch (SQLException e) {
     		throw new RuntimeException(e);
     	}
