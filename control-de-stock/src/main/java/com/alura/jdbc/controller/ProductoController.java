@@ -23,7 +23,7 @@ public class ProductoController {
 
 	public List<Map<String, String>> listar() throws SQLException {
 		
-		System.out.println("Conexión true");
+		System.out.println("Conexión true...");
 		
 		Connection con = DriverManager.getConnection(
 				"jdbc:mysql://localhost/control_de_stock?useTimeZonetrue&serverTomeZone=UTC", 
