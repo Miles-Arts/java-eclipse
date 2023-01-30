@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alura.jdbc.CreaConexion;
+import com.alura.jdbc.factory.ConnectionFactory;
 
 public class ProductoController {
 
@@ -27,7 +27,7 @@ public class ProductoController {
 		
 		System.out.println("Conexión true...");
 		
-		Connection con = new CreaConexion().recuperaConexion();
+		Connection con = new ConnectionFactory().recuperaConexion();
 		
 		Statement statement = con.createStatement();
 		
