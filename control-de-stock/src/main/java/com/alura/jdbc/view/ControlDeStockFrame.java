@@ -267,7 +267,11 @@ public class ControlDeStockFrame extends JFrame {
         
         var categoria = comboCategoria.getSelectedItem();
 
-        this.productoController.guardar(producto);
+        try {
+			this.productoController.guardar(producto);
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
 
         JOptionPane.showMessageDialog(this, "Registrado con éxito!");
 

@@ -59,7 +59,7 @@ public class ProductoController {
 		
 	}
 	
-    public void guardar(Map<String, String> producto) {
+    public void guardar(Map<String, String> producto) throws SQLException {
 	 Connection con = new ConnectionFactory().recuperaConexion();
 	 
 	 Statement statement = con.createStatement();
@@ -70,12 +70,13 @@ public class ProductoController {
 			 + producto.get("DESCRIPCION") + "', "
 			 + producto.get("CANTIDAD"), 			Statement.RETURN_GENERATED_KEYS);
 	 
-	 ResultSet resulSet = statement.getGeneratedKeys();
+	 ResultSet resultSet = statement.getGeneratedKeys();
 	 
 	 
 	 while (resultSet.next()) {
-		 System.out.println(String.format("Fue insertado el producto de ID %d",
-		 resultSet.getInt(0)));
+		 System.out.println(String.format(
+				 "Fue insertado el producto de ID %d",
+				 resultSet.getInt(1)));
 		 
 	 }
 	 
