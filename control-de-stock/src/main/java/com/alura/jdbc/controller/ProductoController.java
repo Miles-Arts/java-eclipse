@@ -1,6 +1,6 @@
 package com.alura.jdbc.controller;
 
-import java.sql.Connection;  
+import java.sql.Connection;   
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.alura.jdbc.CreaConexion;
 
 public class ProductoController {
 
@@ -25,12 +27,7 @@ public class ProductoController {
 		
 		System.out.println("Conexión true...");
 		
-		Connection con = DriverManager.getConnection(
-				"jdbc:mysql://localhost/control_de_stock?useTimeZonetrue&serverTomeZone=UTC", 
-				"root", 
-				"github");
-		
-		
+		Connection con = new CreaConexion().recuperaConexion();
 		
 		Statement statement = con.createStatement();
 		

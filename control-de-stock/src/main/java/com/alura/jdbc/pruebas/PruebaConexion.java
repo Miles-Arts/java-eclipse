@@ -1,8 +1,10 @@
 package com.alura.jdbc.pruebas;
 
-import java.sql.Connection;
+import java.sql.Connection; 
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import com.alura.jdbc.CreaConexion;
 
 public class PruebaConexion {
 
@@ -10,16 +12,14 @@ public class PruebaConexion {
     	
     	System.out.println("Abriendo la conexión");
     	
-        Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost/control_de_stock?useTimeZone=true&serverTimeZone=UTC",
-                "root",
-                "github");
+    	Connection con = new CreaConexion().recuperaConexion();
 
         
         System.out.println("Analizando...");
-        System.out.println("Cerrando la conexión...");
-
+       
         con.close();
+        
+        System.out.println("Cerrando la conexión...");
     }
 
 }
