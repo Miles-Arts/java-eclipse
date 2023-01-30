@@ -1,11 +1,12 @@
 package com.alura.jdbc.view;
 
-import java.awt.Color;
+import java.awt.Color; 
 
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.Optional;
 
 import javax.swing.JButton;
@@ -262,7 +263,8 @@ public class ControlDeStockFrame extends JFrame {
         }
 
         // TODO
-        var producto = new Object[] { textoNombre.getText(), textoDescripcion.getText(), cantidadInt };
+        var producto = new HashMap<String, String>();  producto.put("Nombre", textoNombre.getText()); producto.put("DESCRIPCION", textoDescripcion.getText()); producto.put("CANTIDAD", String.valueOf (cantidadInt));
+        
         var categoria = comboCategoria.getSelectedItem();
 
         this.productoController.guardar(producto);
@@ -279,4 +281,6 @@ public class ControlDeStockFrame extends JFrame {
         this.comboCategoria.setSelectedIndex(0);
     }
 
+   
+    
 }
