@@ -263,13 +263,14 @@ public class ControlDeStockFrame extends JFrame {
         }
 
         // TODO
-        var producto = new HashMap<String, String>();  producto.put("Nombre", textoNombre.getText()); producto.put("DESCRIPCION", textoDescripcion.getText()); producto.put("CANTIDAD", String.valueOf (cantidadInt));
+        var producto = new HashMap<String, String>();  producto.put("NOMBRE", textoNombre.getText()); producto.put("DESCRIPCION", textoDescripcion.getText()); producto.put("CANTIDAD", String.valueOf (cantidadInt));
         
         var categoria = comboCategoria.getSelectedItem();
 
         try {
 			this.productoController.guardar(producto);
 		} catch (SQLException e) {
+			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
 
