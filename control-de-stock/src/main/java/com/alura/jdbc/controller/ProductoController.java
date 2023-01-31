@@ -1,6 +1,6 @@
 package com.alura.jdbc.controller;
 
-import java.sql.Connection;    
+import java.sql.Connection;     
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+
+import javax.swing.JOptionPane;
 
 import com.alura.jdbc.factory.ConnectionFactory;
 
@@ -91,6 +94,34 @@ public class ProductoController {
 	 
 	}
     
+ 
+    
+ // Clase ProductoController
+    public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) throws SQLException {
+        ConnectionFactory factory = new ConnectionFactory();
+        Connection con = factory.recuperaConexion();
+        Statement statement = con.createStatement();
+        statement.execute("UPDATE PRODUCTO SET "
+                + " NOMBRE = '" + nombre + "'"
+                + ", DESCRIPCION = '" + descripcion + "'"
+                + ", CANTIDAD = " + cantidad
+                + " WHERE ID = " + id);
+
+        int updateCount = statement.getUpdateCount();
+
+        con.close();   
+
+        return updateCount;
+    }
+    
+  
+    
+
+
+	private boolean tieneFilaElegida() {
+		// TODO Auto-generated method stub
+		return false;
+	}
     
 
 }
