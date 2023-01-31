@@ -81,8 +81,10 @@ public class ProductoController {
 	 /*Statement statement = con.prepareStatement( "INSERT INTO PRODUCTO (nombre, descripcion, cantidad)" 
 			 + " VALUES (?,?,?)");*/
 	 
-	 PreparedStatement statement = con.prepareStatement( "INSERT INTO PRODUCTO (nombre, descripcion, cantidad)" 
-			 + " VALUES (?,?,?)");
+	 PreparedStatement statement = con.prepareStatement( "INSERT INTO PRODUCTO" 
+	 	+ "(nombre, descripcion, cantidad)" 
+	 	+ " VALUES (?,?,?)",
+	 	Statement.RETURN_GENERATED_KEYS);
 	 
 	 //String sqlInsert =; 
 	 
@@ -90,9 +92,9 @@ public class ProductoController {
 	 statement.setString(2, producto.get("DESCRIPCION"));
 	 statement.setInt(3, Integer.valueOf(producto.get("CANTIDAD")));
 	 
-	 System.out.print(sqlInsert);
+	 //System.out.print(sqlInsert);
 	 
-	 statement.execute( sqlInsert, Statement.RETURN_GENERATED_KEYS);
+	 statement.execute();
 	 
 	 ResultSet resultSet = statement.getGeneratedKeys();
 	 
