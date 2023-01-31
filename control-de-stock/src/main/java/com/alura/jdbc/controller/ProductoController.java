@@ -103,7 +103,16 @@ public class ProductoController {
 	}
 	
     public void guardar(Map<String, String> producto) throws SQLException {
-	 Connection con = new ConnectionFactory().recuperaConexion();
+    	 String nombre = producto.get("NOMBRE");
+    	  
+    	 String descripcion = producto.get("DESCRIPCION");
+    	 
+    	 Integer cantidad = Integer.valueOf(producto.get("CANTIDAD"));
+    	
+    	 Integer maximoCantidad = 50;
+    	 
+    	  ConnectionFactory factory = new ConnectionFactory();
+          Connection con = factory.recuperaConexion();
 	 
 	 //Statement statement = con.createStatement();
 	 
@@ -118,9 +127,12 @@ public class ProductoController {
 	 
 	 //String sqlInsert =; 
 	 
-	 statement.setString(1, producto.get("NOMBRE"));
-	 statement.setString(2, producto.get("DESCRIPCION"));
-	 statement.setInt(3, Integer.valueOf(producto.get("CANTIDAD")));
+	 statement.setString(1, nombre);
+	 statement.setString(2, descripcion);
+	 statement.setInt(3, cantidad);
+	 
+	
+	 
 	 
 	 //System.out.print(sqlInsert);
 	 
@@ -139,10 +151,7 @@ public class ProductoController {
     
    
  
-    
-  
-    
-
+   
 
 	private boolean tieneFilaElegida() {
 		// TODO Auto-generated method stub
