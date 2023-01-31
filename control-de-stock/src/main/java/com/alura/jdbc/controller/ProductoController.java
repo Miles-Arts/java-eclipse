@@ -1,5 +1,11 @@
 package com.alura.jdbc.controller;
 
+/***
+ * CREANDO TIENDA 
+ * CORRECIÓN CÓDIGO
+ * @author Alura and Miles
+ */
+
 import java.sql.Connection;     
 
 import java.sql.DriverManager;
@@ -115,12 +121,9 @@ public class ProductoController {
     	  ConnectionFactory factory = new ConnectionFactory();
           Connection con = factory.recuperaConexion();
 	 
-	 //Statement statement = con.createStatement();
-	 
-	 //VA A DEJKAR DE SER UN STATEMENT AHORA ES UN PREPARED
-	 /*Statement statement = con.prepareStatement( "INSERT INTO PRODUCTO (nombre, descripcion, cantidad)" 
-			 + " VALUES (?,?,?)");*/
-	 
+          con.setAutoCommit(false);
+        
+
 	 PreparedStatement statement = con.prepareStatement( "INSERT INTO PRODUCTO" 
 	 	+ "(nombre, descripcion, cantidad)" 
 	 	+ " VALUES (?,?,?)",
@@ -145,19 +148,24 @@ public class ProductoController {
 
 	private void ejecutaRegistro(String nombre, String descripcion, Integer cantidad, PreparedStatement statement)
 			throws SQLException {
+		
+		if (cantidad < 50 ) {
+			
+			throw new RuntimeException("Ocurrio un error");
+			
+		}
+		
 		statement.setString(1, nombre);
 		statement.setString(2, descripcion);
 		statement.setInt(3, cantidad);
 		
 		statement.execute();
 		 
-		 ResultSet resultSet = statement.getGeneratedKeys();
-		 
-		 
-		 while (resultSet.next()) {
+		ResultSet resultSet = statement.getGeneratedKeys();
+		  
+		while (resultSet.next()) {
 			 System.out.println(String.format(
-					 "Fue insertado el producto de ID: %d",
-					 resultSet.getInt(1)));	 
+			"Fue insertado el producto de ID: %d", resultSet.getInt(1)));	 
 		 }
 	}
  
