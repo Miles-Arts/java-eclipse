@@ -19,16 +19,55 @@ import com.alura.jdbc.factory.ConnectionFactory;
 
 public class ProductoController {
 
-	public void modificar(String nombre, String descripcion, Integer id) {
-		// TODO
-	}
+	public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) throws SQLException {
+        ConnectionFactory factory = new ConnectionFactory();
+        Connection con = factory.recuperaConexion();
+
+        PreparedStatement statement = con.prepareStatement("UPDATE PRODUCTO SET "
+                + " NOMBRE = ? "
+        		+ " DESCRIPCION = ? "
+                + " CANTIDAD = ? " 
+                + " WHERE ID = ? ");
+        
+        statement.setString(1, nombre);
+        statement.setString(2, descripcion);
+        statement.setInt(3, cantidad);
+        statement.setInt(4, id);
+        
+        
+		statement.execute();
+        
+        //statement.execute( + id);
+        
+        int updateCount = statement.getUpdateCount();
+        
+        con.close();
+        
+        return updateCount;
+    }
+	
+	// Clase ProductoController
+    public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) throws SQLException {
+        ConnectionFactory factory = new ConnectionFactory();
+        Connection con = factory.recuperaConexion();
+        Statement statement = con.createStatement();
+        statement.execute("UPDATE PRODUCTO SET "
+                + " NOMBRE = '" + nombre + "'"
+                + ", DESCRIPCION = '" + descripcion + "'"
+                + ", CANTIDAD = " + cantidad
+                + " WHERE ID = " + id);
+
+    }
 
 	public int eliminar(Integer id) throws SQLException {
 		Connection con = new ConnectionFactory().recuperaConexion();
 
-		Statement statement = con.createStatement();
+		//Statement statement = con.createStatement();
+		PreparedStatement statement = con.prepareStatement("DELETE FROM PRODUCTO WHERE ID = ?");
 		
-		statement.execute("DELETE FROM PRODUCTO WHERE ID = " + id);
+		statement.setInt(1, id);
+		
+		statement.execute();
 		
 		//int updateCount = statement.getUpdateCount();
 	
@@ -42,11 +81,13 @@ public class ProductoController {
 		
 		Connection con = new ConnectionFactory().recuperaConexion();
 		
-		Statement statement = con.createStatement();
+		//Statement statement = con.createStatement();
+		
+		PreparedStatement statement = con.prepareStatement("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
 		
 		//boolean result = statement.execute("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
 		
-		statement.execute("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
+		statement.execute();
 		
 		ResultSet resultSet =  statement.getResultSet();
 		
@@ -102,32 +143,13 @@ public class ProductoController {
 	 while (resultSet.next()) {
 		 System.out.println(String.format(
 				 "Fue insertado el producto de ID: %d",
-				 resultSet.getInt(1)));
-		 
+				 resultSet.getInt(1)));	 
 	 }
-	 
-	 
+	 	 
 	}
     
+   
  
-    
- // Clase ProductoController
-    public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) throws SQLException {
-        ConnectionFactory factory = new ConnectionFactory();
-        Connection con = factory.recuperaConexion();
-        Statement statement = con.createStatement();
-        statement.execute("UPDATE PRODUCTO SET "
-                + " NOMBRE = '" + nombre + "'"
-                + ", DESCRIPCION = '" + descripcion + "'"
-                + ", CANTIDAD = " + cantidad
-                + " WHERE ID = " + id);
-
-        int updateCount = statement.getUpdateCount();
-
-        con.close();   
-
-        return updateCount;
-    }
     
   
     
