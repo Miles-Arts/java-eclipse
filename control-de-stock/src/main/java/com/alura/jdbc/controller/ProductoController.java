@@ -103,7 +103,8 @@ public class ProductoController {
 	}
 	
     public void guardar(Map<String, String> producto) throws SQLException {
-    	 String nombre = producto.get("NOMBRE");
+    	
+    	String nombre = producto.get("NOMBRE");
     	  
     	 String descripcion = producto.get("DESCRIPCION");
     	 
@@ -127,32 +128,39 @@ public class ProductoController {
 	 
 	 //String sqlInsert =; 
 	 
-	 statement.setString(1, nombre);
-	 statement.setString(2, descripcion);
-	 statement.setInt(3, cantidad);
+	 do {
+		 int cantidadParaGuardar = Math.min(cantidad, maximoCantidad);
+		 
+		 ejecutaRegistro(nombre, descripcion, cantidadParaGuardar, statement);
+		 
+		 cantidad -= maximoCantidad;
+		 
+	 } while(cantidad > 0);
 	 
-	
-	 
-	 
-	 //System.out.print(sqlInsert);
-	 
-	 statement.execute();
-	 
-	 ResultSet resultSet = statement.getGeneratedKeys();
-	 
-	 
-	 while (resultSet.next()) {
-		 System.out.println(String.format(
-				 "Fue insertado el producto de ID: %d",
-				 resultSet.getInt(1)));	 
-	 }
+	 con.close();
 	 	 
 	}
-    
-   
- 
-   
 
+
+
+	private void ejecutaRegistro(String nombre, String descripcion, Integer cantidad, PreparedStatement statement)
+			throws SQLException {
+		statement.setString(1, nombre);
+		statement.setString(2, descripcion);
+		statement.setInt(3, cantidad);
+		
+		statement.execute();
+		 
+		 ResultSet resultSet = statement.getGeneratedKeys();
+		 
+		 
+		 while (resultSet.next()) {
+			 System.out.println(String.format(
+					 "Fue insertado el producto de ID: %d",
+					 resultSet.getInt(1)));	 
+		 }
+	}
+ 
 	private boolean tieneFilaElegida() {
 		// TODO Auto-generated method stub
 		return false;
