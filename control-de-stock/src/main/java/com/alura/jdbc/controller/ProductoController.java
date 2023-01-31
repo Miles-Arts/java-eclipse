@@ -76,11 +76,16 @@ public class ProductoController {
 	 
 	 Statement statement = con.createStatement();
 	 
-	 statement.execute( " INSERT INTO PRODUCTO (nombre, descripcion, cantidad) " 
+	 String sqlInsert = "INSERT INTO PRODUCTO (nombre, descripcion, cantidad)" 
 			 + " VALUES ('"  
 			 + producto.get("NOMBRE") + "', '"
-			 + producto.get("DESCRIPCION") + "', "
-			 + producto.get("CANTIDAD")+ ")", Statement.RETURN_GENERATED_KEYS);
+			 + producto.get("DESCRIPCION") + "', '"
+			 + producto.get("CANTIDAD") + "')"; 
+	 
+	 System.out.print(sqlInsert);
+	 
+	 statement.execute( sqlInsert, Statement.RETURN_GENERATED_KEYS);
+	 
 	 ResultSet resultSet = statement.getGeneratedKeys();
 	 
 	 
