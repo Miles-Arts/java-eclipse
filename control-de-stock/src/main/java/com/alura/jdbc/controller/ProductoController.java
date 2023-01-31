@@ -3,6 +3,7 @@ package com.alura.jdbc.controller;
 import java.sql.Connection;     
 
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -74,13 +75,20 @@ public class ProductoController {
     public void guardar(Map<String, String> producto) throws SQLException {
 	 Connection con = new ConnectionFactory().recuperaConexion();
 	 
-	 Statement statement = con.createStatement();
+	 //Statement statement = con.createStatement();
 	 
-	 String sqlInsert = "INSERT INTO PRODUCTO (nombre, descripcion, cantidad)" 
-			 + " VALUES ('"  
-			 + producto.get("NOMBRE") + "', '"
-			 + producto.get("DESCRIPCION") + "', '"
-			 + producto.get("CANTIDAD") + "')"; 
+	 //VA A DEJKAR DE SER UN STATEMENT AHORA ES UN PREPARED
+	 /*Statement statement = con.prepareStatement( "INSERT INTO PRODUCTO (nombre, descripcion, cantidad)" 
+			 + " VALUES (?,?,?)");*/
+	 
+	 PreparedStatement statement = con.prepareStatement( "INSERT INTO PRODUCTO (nombre, descripcion, cantidad)" 
+			 + " VALUES (?,?,?)");
+	 
+	 //String sqlInsert =; 
+	 
+	 statement.setString(1, producto.get("NOMBRE"));
+	 statement.setString(2, producto.get("DESCRIPCION"));
+	 statement.setInt(3, Integer.valueOf(producto.get("CANTIDAD")));
 	 
 	 System.out.print(sqlInsert);
 	 
