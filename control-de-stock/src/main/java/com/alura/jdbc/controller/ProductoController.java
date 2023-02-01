@@ -45,8 +45,7 @@ public class ProductoController {
 	        	statement.setInt(4, id);
 	        
 	        
-				statement.execute();
-		        
+				statement.execute();   
 		        //statement.execute( + id);
 		        
 		        int updateCount = statement.getUpdateCount();
@@ -129,11 +128,11 @@ public class ProductoController {
     	
     	String nombre = producto.get("NOMBRE");
     	  
-    	 String descripcion = producto.get("DESCRIPCION");
+    	String descripcion = producto.get("DESCRIPCION");
     	 
-    	 Integer cantidad = Integer.valueOf(producto.get("CANTIDAD"));
+    	Integer cantidad = Integer.valueOf(producto.get("CANTIDAD"));
     	
-    	 Integer maximoCantidad = 50;
+    	Integer maximoCantidad = 50;
     	 
     	  ConnectionFactory factory = new ConnectionFactory();
           final Connection con = factory.recuperaConexion();
