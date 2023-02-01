@@ -22,6 +22,7 @@ import java.util.Optional;
 import javax.swing.JOptionPane;
 
 import com.alura.jdbc.factory.ConnectionFactory;
+import com.alura.jdbc.modelo.Producto;
 
 public class ProductoController {
 
@@ -124,13 +125,13 @@ public class ProductoController {
 		}	
 	}
 	
-    public void guardar(Map<String, String> producto) throws SQLException {
+    public void guardar(Producto producto) throws SQLException {
     	
-    	String nombre = producto.get("NOMBRE");
+    	String nombre = producto.getNombre();
     	  
-    	String descripcion = producto.get("DESCRIPCION");
+    	String descripcion = producto.getDescripcion();
     	 
-    	Integer cantidad = Integer.valueOf(producto.get("CANTIDAD"));
+    	Integer cantidad = producto.getCantidad();
     	
     	Integer maximoCantidad = 50;
     	 
