@@ -171,14 +171,28 @@ public class ProductoController {
 		
 		statement.execute();
 		 
-		ResultSet resultSet = statement.getGeneratedKeys();
-		  
-		while (resultSet.next()) {
-			 System.out.println(String.format(
-			"Fue insertado el producto de ID: %d", resultSet.getInt(1)));	 
-		 }
 		
-		resultSet.close();
+		//try-with-resource JAVA 7
+		/*try(ResultSet resultSet = statement.getGeneratedKeys();) {
+	
+			while (resultSet.next()) {
+				System.out.println(String.format(
+						"Fue insertado el producto de ID: %d", resultSet.getInt(1)));	 		 
+		 }
+		}*/
+		
+		
+		//try-with-resource JAVA 9
+		final ResultSet resultSet = statement.getGeneratedKeys();
+		try(resultSet) {
+			
+			while (resultSet.next()) {
+				System.out.println(String.format(
+						"Fue insertado el producto de ID: %d", resultSet.getInt(1)));	 		 
+		 }
+		}
+	
+		//resultSet.close();
 	}
  
 	private boolean tieneFilaElegida() {
