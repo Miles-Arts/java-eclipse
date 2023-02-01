@@ -142,10 +142,14 @@ public class ProductoController {
 		 
 		 	con.commit();
 		
-	 } catch(SQLException e ) {
+		 	//System.out.println("COMMIT");
+		 	
+	 } catch(Exception e ) {
 		 con.rollback();
+		 //System.out.println("ROLLBACK");
 	 }
-	 
+
+	 statement.close();
 	 
 	 con.close();
 	 	 
@@ -173,6 +177,8 @@ public class ProductoController {
 			 System.out.println(String.format(
 			"Fue insertado el producto de ID: %d", resultSet.getInt(1)));	 
 		 }
+		
+		resultSet.close();
 	}
  
 	private boolean tieneFilaElegida() {
