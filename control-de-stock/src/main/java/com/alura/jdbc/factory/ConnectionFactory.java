@@ -22,6 +22,7 @@ public class ConnectionFactory {
 		
 		pooledDataSource.setUser("root");
 		pooledDataSource.setPassword("github");
+		pooledDataSource.setMaxPoolSize(10);
 		
 		this.datasource = pooledDataSource;
 		
