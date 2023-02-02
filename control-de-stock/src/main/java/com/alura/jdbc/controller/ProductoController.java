@@ -35,62 +35,23 @@ public class ProductoController {
 		
 	}
 	
-	public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) throws SQLException {
-		
-        ConnectionFactory factory = new ConnectionFactory();
-        final Connection con = factory.recuperaConexion();
+	
+	public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) 
 
-        
-        try(con) {
-	        final PreparedStatement statement = con.prepareStatement("UPDATE PRODUCTO SET "
-	                + " NOMBRE = ? "
-	        		+ " DESCRIPCION = ? "
-	                + " CANTIDAD = ? " 
-	                + " WHERE ID = ? ");
-	        
-	        	try(statement) {
-	        	statement.setString(1, nombre);
-	        	statement.setString(2, descripcion);
-	        	statement.setInt(3, cantidad);
-	        	statement.setInt(4, id);
-	        
-	        
-				statement.execute();   
-		        //statement.execute( + id);
-		        
-		        int updateCount = statement.getUpdateCount();
-		        
-		        con.close();
-		        
-		        return updateCount;
-	        }
-        }
+		    ProductoController productoDao;
+			return productoDao.modificar(nombre, descripcion, cantidad, id);
+	
+		}
     }
 	
 
 
-	public int eliminar(Integer id) throws SQLException {
+	public int eliminar(Integer id) {
+	    
+		productoDAO.eliminar(id);
 		
-	
-		ConnectionFactory factory = new ConnectionFactory();
-		
-		final Connection con = new ConnectionFactory().recuperaConexion();
-
-		//Statement statement = con.createStatement();
-		
-		try(con) {
-			final PreparedStatement statement = con.prepareStatement("DELETE FROM PRODUCTO WHERE ID = ?");
-			try(statement) {
-				statement.setInt(1, id);
-				
-				statement.execute();
-				
-				//int updateCount = statement.getUpdateCount();
-			
-				return statement.getUpdateCount();
-			}
-			}
-		}
+		return productoDAO.eliminar(id);
+	}
 
 	//Metodo listar
 	public List<Producto> listar()  {

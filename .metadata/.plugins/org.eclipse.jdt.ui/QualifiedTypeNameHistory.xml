@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Administrador"/>
-    <fullyQualifiedTypeName name="AutenticacionUtil"/>
     <fullyQualifiedTypeName name="MiException"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
@@ -56,8 +54,10 @@
     <fullyQualifiedTypeName name="com.mchange.v2.c3p0.ComboPooledDataSource"/>
     <fullyQualifiedTypeName name="com.mchange.v2.c3p0.DataSources"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-    <fullyQualifiedTypeName name="com.alura.jdbc.factory.ConnectionFactory"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.modelo.Producto"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.persistencia.PersistenciaProducto"/>
+    <fullyQualifiedTypeName name="com.alura.jdbc.dao.ProductoDAO"/>
+    <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
+    <fullyQualifiedTypeName name="com.alura.jdbc.factory.ConnectionFactory"/>
 </qualifiedTypeNameHistroy>
