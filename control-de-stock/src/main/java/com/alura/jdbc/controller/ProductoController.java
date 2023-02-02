@@ -93,7 +93,7 @@ public class ProductoController {
 		}
 
 	//Metodo listar
-	public List<Map<String, String>> listar()  {
+	public List<Producto> listar()  {
 		
 		return productoDAO.listar();
 		

@@ -74,9 +74,9 @@ public class ProductoDAO {
 			
 	}
 
-	 public List<Map<String, String>> listar() {
+	 public List<Producto> listar() {
 				
-				List<Map<String, String>> resultado = new ArrayList<>();
+				List<Producto> resultado = new ArrayList<>();
 				
 				System.out.println("Conexión true...");
 				
@@ -97,11 +97,12 @@ public class ProductoDAO {
 					try(resultSet) {
 						while (resultSet.next()) {
 					
-							Map<String, String> fila = new HashMap<>();
-							fila.put("ID", String.valueOf( resultSet.getInt("ID")));
-							fila.put("NOMBRE", resultSet.getString("NOMBRE"));
-							fila.put("DESCRIPCION", resultSet.getString("DESCRIPCION"));
-							fila.put("CANTIDAD", String.valueOf( resultSet.getInt("CANTIDAD")));
+							Producto fila = new Producto(resultSet.getInt("ID"), 
+									resultSet.getString("NOMBRE"),
+									resultSet.getString("DESCRIPCION"),
+									resultSet.getInt("CANTIDAD")
+									);
+
 							
 							resultado.add(fila);
 						}
