@@ -23,6 +23,7 @@ import javax.swing.JOptionPane;
 
 import com.alura.jdbc.factory.ConnectionFactory;
 import com.alura.jdbc.modelo.Producto;
+import com.alura.jdbc.persistencia.PersistenciaProducto;
 
 public class ProductoController {
 
@@ -119,75 +120,18 @@ public class ProductoController {
 				return resultado;
 				
 			}
-			//con.close();
-
-		
+	
 		}	
 	}
 	
     public void guardar(Producto producto) throws SQLException {
     	
+    		PersistenciaProducto persistenciaProducto = new PersistenciaProducto(new ConnectionFactory().recuperaConexion());
     	
-    	  ConnectionFactory factory = new ConnectionFactory();
-          final Connection con = factory.recuperaConexion();
-          
-          try(con) {
-        	 
-	          con.setAutoCommit(false);
-	        
-		 	final PreparedStatement statement = con.prepareStatement( "INSERT INTO PRODUCTO" 
-		 		+ "(nombre, descripcion, cantidad)" 
-		 		+ " VALUES (?,?,?)",
-		 		Statement.RETURN_GENERATED_KEYS);
-	
-		 	try (statement) {
-					ejecutaRegistro(producto, statement);
-					
-					con.commit();
-				
-				 	//System.out.println("COMMIT");
-				 	
-			 } catch(Exception e ) {
-				 
-				 e.printStackTrace();				 
-				 System.out.println("ROLLBACK");
-				 con.rollback();
-				 
-			 }
-		 }		 
-		 //statement.close();
-		 //con.close();
-     } 	 
-	
+    persistenciaProducto.guardarProducto(producto);		
+    		
+	}		 
 
-
-	private void ejecutaRegistro(Producto producto, PreparedStatement statement)
-			throws SQLException {
-		
-		/*if (cantidad < 50 ) {
-	
-			throw new RuntimeException("Ocurrio un error");
-			
-		}*/
-		
-		statement.setString(1, producto.getNombre());
-		statement.setString(2, producto.getDescripcion());
-		statement.setInt(3, producto.getCantidad());
-		
-		statement.execute();
-
-		final ResultSet resultSet = statement.getGeneratedKeys();
-		try(resultSet) {
-			
-			while (resultSet.next()) {
-				producto.setId(resultSet.getInt(1));
-				System.out.println(String.format(
-						"Fue insertado el producto %s", producto ));	 		 
-		 }
-		}
-	
-	}
- 
 	private boolean tieneFilaElegida() {
 		// TODO Auto-generated method stub
 		return false;
