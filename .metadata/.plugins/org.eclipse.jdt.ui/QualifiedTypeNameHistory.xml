@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="SistemaInterno"/>
-    <fullyQualifiedTypeName name="java.awt.GradientPaint"/>
-    <fullyQualifiedTypeName name="Gerente"/>
-    <fullyQualifiedTypeName name="FuncionarioAutenticable"/>
-    <fullyQualifiedTypeName name="Funcionario"/>
-    <fullyQualifiedTypeName name="Autenticable"/>
     <fullyQualifiedTypeName name="Administrador"/>
     <fullyQualifiedTypeName name="AutenticacionUtil"/>
     <fullyQualifiedTypeName name="MiException"/>
@@ -53,11 +47,17 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.CreaConexion"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.mchange.v2.c3p0.ComboPooledDataSource"/>
+    <fullyQualifiedTypeName name="com.mchange.v2.c3p0.DataSources"/>
+    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="com.alura.jdbc.factory.ConnectionFactory"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="com.alura.jdbc.modelo.Producto"/>
+    <fullyQualifiedTypeName name="com.alura.jdbc.persistencia.PersistenciaProducto"/>
 </qualifiedTypeNameHistroy>
