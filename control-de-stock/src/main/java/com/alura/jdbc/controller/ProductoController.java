@@ -35,17 +35,13 @@ public class ProductoController {
 		
 	}
 	
-	
-	public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) 
+	public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) {
 
-		    ProductoController productoDao;
+		    ProductoController productoDao = new ProductoController();
 			return productoDao.modificar(nombre, descripcion, cantidad, id);
 	
-		}
-    }
-	
-
-
+	}
+  
 	public int eliminar(Integer id) {
 	    
 		productoDAO.eliminar(id);
@@ -58,7 +54,6 @@ public class ProductoController {
 		
 		return productoDAO.listar();
 		
-			
 }
 	
     public void guardar(Producto producto)  {
@@ -71,6 +66,5 @@ public class ProductoController {
 		// TODO Auto-generated method stub
 		return false;
 	}
-    
-
+ 
 }
