@@ -1,4 +1,4 @@
-package com.alura.jdbc.persistencia;
+package com.alura.jdbc.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,27 +9,24 @@ import java.sql.Statement;
 import com.alura.jdbc.factory.ConnectionFactory;
 import com.alura.jdbc.modelo.Producto;
 
-public class PersistenciaProducto {
+public class ProductoDAO {
 	
 	
-	private Connection con;
+	final private Connection con;
 	
-	public PersistenciaProducto(Connection con) {
+	public ProductoDAO(Connection con) {
 		
 		this.con = con;
 		
 	}
 	
-	public void guardarProducto(Producto producto) {
-		
-		ConnectionFactory factory = new ConnectionFactory();
-        final Connection con = factory.recuperaConexion();
-        
+	public void guardar(Producto producto) throws SQLException {
+	 
         try(con) {
       	 
 	          con.setAutoCommit(false);
 	        
-		 	final PreparedStatement statement = con.prepareStatement( "INSERT INTO PRODUCTO" 
+	          final PreparedStatement statement = con.prepareStatement( "INSERT INTO PRODUCTO" 
 		 		+ "(nombre, descripcion, cantidad)" 
 		 		+ " VALUES (?,?,?)",
 		 		Statement.RETURN_GENERATED_KEYS);
@@ -41,14 +38,14 @@ public class PersistenciaProducto {
 				
 				 	//System.out.println("COMMIT");
 				 	
-			 } catch(Exception e ) {
+		 	} catch(Exception e ) {
 				 
-				 e.printStackTrace();				 
-				 System.out.println("ROLLBACK");
-				 con.rollback();
+			e.printStackTrace();				 
+			System.out.println("ROLLBACK");
+			con.rollback();
 				 
-			 }
-        }
+			}
+       }
 }	
 		 	private void ejecutaRegistro(Producto producto, PreparedStatement statement)
 					throws SQLException {
@@ -63,9 +60,9 @@ public class PersistenciaProducto {
 				final ResultSet resultSet = statement.getGeneratedKeys();
 				try(resultSet) {
 					
-					while (resultSet.next()) {
-						producto.setId(resultSet.getInt(1));
-						System.out.println(String.format(
+				while (resultSet.next()) {
+					producto.setId(resultSet.getInt(1));
+					System.out.println(String.format(
 								"Fue insertado el producto %s", producto ));	 		 
 			}
 		}
