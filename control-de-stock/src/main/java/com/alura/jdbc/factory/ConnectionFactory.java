@@ -3,6 +3,7 @@ package com.alura.jdbc.factory;
 import java.sql.Connection; 
 import java.sql.SQLException;
 
+import javax.management.RuntimeErrorException;
 import javax.sql.DataSource;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
@@ -28,15 +29,16 @@ public class ConnectionFactory {
 		
 	}
 	
-	public Connection recuperaConexion() throws SQLException {
-		
-		//Devolver la conexion con RETURN
-		//Connection con = DriverManager.getConnection(
-				//"jdbc:mysql://localhost/control_de_stock?useTimeZonetrue&serverTomeZone=UTC", 
-				//"root", 
-				//"github");
-		
-		return this.datasource.getConnection();
+	public Connection recuperaConexion() {
+	
+		try {
+			
+			return this.datasource.getConnection();
+		} catch (SQLException e) {
+			
+			throw new RuntimeException(e);
+			
+		}
 		
 	}
 	

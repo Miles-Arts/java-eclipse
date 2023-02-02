@@ -27,6 +27,14 @@ import com.alura.jdbc.modelo.Producto;
 
 public class ProductoController {
 
+	private ProductoDAO productoDAO;
+
+	public ProductoController() {
+		
+		this.productoDAO =  new ProductoDAO(new ConnectionFactory().recuperaConexion());
+		
+	}
+	
 	public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) throws SQLException {
 		
         ConnectionFactory factory = new ConnectionFactory();
@@ -84,51 +92,17 @@ public class ProductoController {
 			}
 		}
 
-	public List<Map<String, String>> listar() throws SQLException {
+	//Metodo listar
+	public List<Map<String, String>> listar()  {
 		
-		System.out.println("Conexión true...");
+		return productoDAO.listar();
 		
-		final Connection con = new ConnectionFactory().recuperaConexion();
-		
-		try(con) {
-	//Statement statement = con.createStatement();
-		
-			final PreparedStatement statement = con.prepareStatement("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
 			
-			try(statement) {
-			
-				statement.execute();
-				
-				ResultSet resultSet =  statement.getResultSet();
-				
-				
-				List<Map<String, String>> resultado = new ArrayList<>();
-				
-				while (resultSet.next()) {
-					
-				
-					Map<String, String> fila = new HashMap<>();
-					fila.put("ID", String.valueOf( resultSet.getInt("ID")));
-					fila.put("NOMBRE", resultSet.getString("NOMBRE"));
-					fila.put("DESCRIPCION", resultSet.getString("DESCRIPCION"));
-					fila.put("CANTIDAD", String.valueOf( resultSet.getInt("CANTIDAD")));
-					
-					resultado.add(fila);
-					
-				}
-				
-				return resultado;
-				
-			}
+}
 	
-		}	
-	}
-	
-    public void guardar(Producto producto) throws SQLException {
+    public void guardar(Producto producto)  {
     	
-    		ProductoDAO productoDAO = new ProductoDAO(new ConnectionFactory().recuperaConexion());
-    	
-    productoDAO.guardar(producto);		
+    	productoDAO.guardar(producto);		
     		
 	}		 
 
