@@ -14,6 +14,7 @@ public class Producto {
 		
 		private Integer cantidad;
 		
+		
 		public Producto(String nombre, String descripcion, Integer cantidad) {
 			
 			this.nombre = nombre;

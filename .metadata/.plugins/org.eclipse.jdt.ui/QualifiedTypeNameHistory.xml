@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="MiException"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="com.alura.jdbc.dao.ProductoDAO"/>
     <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.factory.ConnectionFactory"/>
+    <fullyQualifiedTypeName name="com.alura.jdbc.modelo.Categoria"/>
 </qualifiedTypeNameHistroy>
