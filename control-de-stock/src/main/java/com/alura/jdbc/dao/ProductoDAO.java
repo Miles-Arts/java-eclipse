@@ -156,7 +156,12 @@ public class ProductoDAO {
 		List<Producto> resultado = new ArrayList<>();
 
 		try{
-			final PreparedStatement statement = con.prepareStatement("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO WHERE CATEGORIA_ID = ?");
+			
+			var querySelect = "SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO WHERE CATEGORIA_ID = ?";
+			
+			System.out.println(querySelect);
+			
+			final PreparedStatement statement = con.prepareStatement(querySelect);
 			
 			try(statement) {
 				
