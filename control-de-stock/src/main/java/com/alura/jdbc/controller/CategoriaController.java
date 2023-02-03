@@ -27,8 +27,8 @@ public class CategoriaController {
 
     public List<Categoria> cargaReporte() {
     	
-    	return this.listar();
-        //return this.categoriaDAO.listarConProductos();
+    	//return this.listar();
+        return this.categoriaDAO.listarConProductos();
         
     }
 
