@@ -34,6 +34,13 @@ public class CategoriaDAO {
 				
 			try(resultSet) {
 				
+				while (resultSet.next()) {
+					
+					var categoria = new Categoria(resultSet.getInt("ID"),
+							resultSet.getString("NOMBRE"));
+					resultado.add(categoria);
+				}
+				
 			};
 			
 		}

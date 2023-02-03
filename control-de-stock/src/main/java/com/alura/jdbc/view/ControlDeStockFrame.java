@@ -103,9 +103,9 @@ public class ControlDeStockFrame extends JFrame {
         comboCategoria = new JComboBox<>();
         comboCategoria.addItem(new Categoria(0, "Elige una Categoría"));
 
-        // TODO
+       
         var categorias = this.categoriaController.listar();
-        // categorias.forEach(categoria -> comboCategoria.addItem(categoria));
+         categorias.forEach(categoria -> comboCategoria.addItem(categoria));
 
         textoNombre.setBounds(10, 25, 265, 20);
         textoDescripcion.setBounds(10, 65, 265, 20);
@@ -249,22 +249,11 @@ public class ControlDeStockFrame extends JFrame {
         		textoNombre.getText(), 
         		textoDescripcion.getText(),  
         		cantidadInt);  
-        
-        		/*producto.put("NOMBRE"); 	
-       		 	producto.put("DESCRIPCION"); 
-        		producto.put("CANTIDAD", String.valueOf());*/
-        
-        var categoria = comboCategoria.getSelectedItem();
+     
+        var categoria = (Categoria) comboCategoria.getSelectedItem();
 
-        this.productoController.guardar(producto);
-        
-       // try {
-		//	this.productoController.guardar(producto);
-		//} catch (SQLException e) {
-		//	e.printStackTrace();
-		//	throw new RuntimeException(e);
-		//}
-
+        this.productoController.guardar(producto, categoria.getId());
+      
         JOptionPane.showMessageDialog(this, "Registrado con éxito!");
 
         this.limpiarFormulario();
@@ -275,8 +264,5 @@ public class ControlDeStockFrame extends JFrame {
         this.textoDescripcion.setText("");
         this.textoCantidad.setText("");
         this.comboCategoria.setSelectedIndex(0);
-    }
-
-   
-    
+    }    
 }

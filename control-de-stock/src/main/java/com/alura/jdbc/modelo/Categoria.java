@@ -16,7 +16,16 @@ public class Categoria {
 		
 	}
 	
+	public Integer getId() {
+
+		return this.id;		
+	}
 	
-	
+	@Override
+	public String toString() {
+
+		return this.nombre;
+		
+	}
 
 }

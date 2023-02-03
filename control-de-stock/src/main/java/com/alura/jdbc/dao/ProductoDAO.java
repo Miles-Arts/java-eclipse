@@ -24,32 +24,37 @@ public class ProductoDAO {
 		
 	}
 	
-	 public void guardar(Producto producto) {
-	 
-        try(con) {
-      	 
-	          //con.setAutoCommit(false);
-	        
-	          final PreparedStatement statement = con.prepareStatement("INSERT INTO PRODUCTO "
-                      + "(nombre, descripcion, cantidad)"
-                      + " VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
-	
-		 	try (statement) {
-					ejecutaRegistro(producto, statement);
-					
-					//con.commit();
-				
-		 		}	//System.out.println("COMMIT");
-				 	
-		 	} catch(SQLException e ) {
-				 
-			//e.printStackTrace();				 
-			//System.out.println("ROLLBACK");
-			//con.rollback();
-				 
-		 		throw new RuntimeException(e);	
-			}
-       }
+    public void guardar(Producto producto) {
+        try {
+            PreparedStatement statement;
+                statement = con.prepareStatement(
+                        "INSERT INTO PRODUCTO "
+                        + "(nombre, descripcion, cantidad, categoria_id)"
+                        + " VALUES (?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+    
+            try (statement) {
+                statement.setString(1, producto.getNombre());
+                statement.setString(2, producto.getDescripcion());
+                statement.setInt(3, producto.getCantidad());
+                statement.setInt(4, producto.getCategoriaId());
+    
+                statement.execute();
+    
+                final ResultSet resultSet = statement.getGeneratedKeys();
+    
+                try (resultSet) {
+                    while (resultSet.next()) {
+                        producto.setId(resultSet.getInt(1));
+                        
+                        System.out.println(String.format("Fue insertado el producto: %s", producto));
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 	
 	
 	 private void ejecutaRegistro(Producto producto, PreparedStatement statement)
