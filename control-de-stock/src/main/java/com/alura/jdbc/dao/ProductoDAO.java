@@ -1,16 +1,16 @@
 package com.alura.jdbc.dao;
 
-import java.sql.Connection;
+import java.sql.Connection; 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.HashMap;
+//import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+//import java.util.Map;
 
-import com.alura.jdbc.factory.ConnectionFactory;
+//import com.alura.jdbc.factory.ConnectionFactory;
 import com.alura.jdbc.modelo.Producto;
 
 public class ProductoDAO {
@@ -57,7 +57,7 @@ public class ProductoDAO {
 
 	
 	
-	 private void ejecutaRegistro(Producto producto, PreparedStatement statement)
+	 /*private void ejecutaRegistro(Producto producto, PreparedStatement statement)
 					throws SQLException {
 			
 				
@@ -77,48 +77,36 @@ public class ProductoDAO {
 			}
 		}
 			
-	}
+	}*/
 
-	 public List<Producto> listar() {
-				
-				List<Producto> resultado = new ArrayList<>();
-				
-				System.out.println("Conexión true...");
-				
-				ConnectionFactory factory = new ConnectionFactory();
-				final Connection con = new ConnectionFactory().recuperaConexion();
-				
-				try(con) {
-			//Statement statement = con.createStatement();
-				
-					final PreparedStatement statement = con.prepareStatement("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
-					
-					try(statement) {
-					
-						statement.execute();
-						
-						final ResultSet resultSet =  statement.getResultSet();
-				
-					try(resultSet) {
-						while (resultSet.next()) {
-					
-							Producto fila = new Producto(resultSet.getInt("ID"), 
-									resultSet.getString("NOMBRE"),
-									resultSet.getString("DESCRIPCION"),
-									resultSet.getInt("CANTIDAD")
-									);
+    public List<Producto> listar() {
+        List<Producto> resultado = new ArrayList<>();
 
-							
-							resultado.add(fila);
-						}
-					}
-				}
-						return resultado;
-			} catch (SQLException e) {
-				throw new RuntimeException(e);
-			}
-				
-	}
+        try {
+            final PreparedStatement statement = con
+                    .prepareStatement("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO");
+    
+            try (statement) {
+                statement.execute();
+    
+                final ResultSet resultSet = statement.getResultSet();
+    
+                try (resultSet) {
+                    while (resultSet.next()) {
+                        resultado.add(new Producto(
+                                resultSet.getInt("ID"),
+                                resultSet.getString("NOMBRE"),
+                                resultSet.getString("DESCRIPCION"),
+                                resultSet.getInt("CANTIDAD")));
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return resultado;
+    }
 
 	 
 	 public int eliminar(Integer id) {
@@ -168,7 +156,7 @@ public class ProductoDAO {
 		List<Producto> resultado = new ArrayList<>();
 
 		try{
-			final PreparedStatement statement = con.prepareStatement("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO, WHERE CATEGORIA_ID = ?");
+			final PreparedStatement statement = con.prepareStatement("SELECT ID, NOMBRE, DESCRIPCION, CANTIDAD FROM PRODUCTO WHERE CATEGORIA_ID = ?");
 			
 			try(statement) {
 				

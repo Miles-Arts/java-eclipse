@@ -6,7 +6,7 @@ package com.alura.jdbc.controller;
  * @author Alura and Miles
  */
 
-import java.sql.Connection;     
+import java.sql.Connection;      
 
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -30,16 +30,18 @@ public class ProductoController {
 
 	private ProductoDAO productoDAO;
 
-	public ProductoController() {
-		
-		this.productoDAO =  new ProductoDAO(new ConnectionFactory().recuperaConexion());
-		
-	}
+	  public ProductoController() {
+		  
+	        var factory = new ConnectionFactory();
+	        
+	        this.productoDAO = new ProductoDAO(factory.recuperaConexion());
+	    }
+
 	
 	public int modificar(String nombre, String descripcion, Integer cantidad, Integer id) {
 
-		    ProductoController productoDao = new ProductoController();
-			return productoDao.modificar(nombre, descripcion, cantidad, id);
+		    //ProductoController productoDAO = new ProductoController();
+			return productoDAO.modificar(nombre, descripcion, cantidad, id);
 	
 	}
   
@@ -72,9 +74,6 @@ public class ProductoController {
     		
 	}		 
 
-	private boolean tieneFilaElegida() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
  
 }

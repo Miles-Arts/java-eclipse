@@ -54,4 +54,9 @@ public class CategoriaDAO {
 		return resultado;
 	}
 
+	public List<Categoria> listarConProductos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
