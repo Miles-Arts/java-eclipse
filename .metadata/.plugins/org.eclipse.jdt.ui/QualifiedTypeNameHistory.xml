@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="SaldoInsuficienteException"/>
@@ -54,10 +53,11 @@
     <fullyQualifiedTypeName name="com.alura.jdbc.persistencia.PersistenciaProducto"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.dao.ProductoDAO"/>
     <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
-    <fullyQualifiedTypeName name="com.alura.jdbc.modelo.Categoria"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.factory.ConnectionFactory"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="com.alura.jdbc.controller.ProductoController"/>
+    <fullyQualifiedTypeName name="com.alura.jdbc.modelo.Categoria"/>
 </qualifiedTypeNameHistroy>
