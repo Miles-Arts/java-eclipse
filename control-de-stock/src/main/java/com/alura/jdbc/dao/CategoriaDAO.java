@@ -76,9 +76,20 @@ public class CategoriaDAO {
 				
 					while (resultSet.next()) {
 					
-						var categoria = new Categoria(resultSet.getInt("ID"),
-								resultSet.getString("NOMBRE"));
-						resultado.add(categoria);
+						Integer categoriaId = resultSet.getInt("ID");
+						
+						String categoriaNombre = resultSet.getString("NOMBRE");
+						
+						var categoria = resultado
+								.stream()
+								.filter(cat -> cat.getId().equals(categoriaId))
+								.findAny().orElseGet(() -> {
+									Categoria cat = new Categoria(categoriaId, categoriaNombre);
+									
+									resultado.add(cat);
+									
+									return cat;
+								});						
 					}				
 				};			
 			}		
