@@ -28,7 +28,6 @@
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.util.Vector"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.CuentaAhorros"/>
     <fullyQualifiedTypeName name="com.bytebank.modelo.Cliente"/>
@@ -49,15 +48,16 @@
     <fullyQualifiedTypeName name="com.mchange.v2.c3p0.ComboPooledDataSource"/>
     <fullyQualifiedTypeName name="com.mchange.v2.c3p0.DataSources"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-    <fullyQualifiedTypeName name="com.alura.jdbc.modelo.Producto"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.persistencia.PersistenciaProducto"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.dao.ProductoDAO"/>
     <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.factory.ConnectionFactory"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.controller.ProductoController"/>
     <fullyQualifiedTypeName name="com.alura.jdbc.modelo.Categoria"/>
+    <fullyQualifiedTypeName name="com.alura.jdbc.modelo.Producto"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
