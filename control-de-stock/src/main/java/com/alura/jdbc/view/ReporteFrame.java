@@ -8,6 +8,7 @@ import javax.swing.table.DefaultTableModel;
 
 import com.alura.jdbc.controller.CategoriaController;
 import com.alura.jdbc.controller.ProductoController;
+import com.mysql.cj.protocol.x.SyncFlushDeflaterOutputStream;
 
 public class ReporteFrame extends JFrame {
 
@@ -29,6 +30,8 @@ public class ReporteFrame extends JFrame {
         
         Container container = getContentPane();
         setLayout(null);
+        
+        sysout
 
         tablaReporte = new JTable();
         tablaReporte.setBounds(0, 0, 600, 400);
@@ -60,6 +63,8 @@ public class ReporteFrame extends JFrame {
                     "",
                     producto.getNombre(),
                     producto.getCantidad()
+                    
+                    
             }));
         });
     }
